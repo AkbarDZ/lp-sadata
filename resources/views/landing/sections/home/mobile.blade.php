@@ -32,10 +32,65 @@
 	</svg> --}}
 </div>
 
-<section class="border-0 m-0 position-relative overflow-visible pt-0" style="background: #002146;">
+<section class="border-0 m-0 position-relative overflow-visible pt-0 py-4" style="background: #002146;">
 
 
 	<div class="container">
+	@if (count($datamobile) > 0)
+	@foreach ($datamobile as $key => $item)
+		@if ($key === 0)
+			<div class="row justify-content-center d-none d-lg-block" style="margin-top: 80px !important;"></div>
+		@endif
+		@if ($key % 2 == 0)
+			<div class="row pb-5 justify-content-center">
+				<div class="col-lg-5 text-center pb-3">
+					{{-- <img src="{{ asset('assets/landing/assets/img/feature-01.png') }}" width="70%" alt class="img-fluid lazy-load-loaded d-lg-inline d-none" style="position: relative; top: -30% !important;" /> --}}
+					<img src="{{ asset('assets/landing/sections/home/mobile/hp 1 revisi.png') }}" class="lazy-load-loaded d-lg-inline d-none img-mobile-a"/>
+
+					{{-- <img src="{{ asset('assets/landing/sections/home/mobile/lingkaran 1.png') }}" style="width: 90%; position: absolute;" class="img-fluid lazy-load-loaded d-lg-inline d-none"> --}}
+
+					{{-- <img src="{{ asset('assets/landing/sections/home/mobile/dot 2.png') }}" style="width: 40%; position: absolute; left: 30%;" class="img-fluid lazy-load-loaded d-lg-inline d-none"> --}}
+
+				</div>
+				<div class="col-10 col-lg-5 text-center text-lg-left mt-lg-5 mt-3">
+					{{-- <div class="d-none d-lg-flex" style="margin-top: 75px;"></div> --}}
+
+					<h2 class="custom-bar _left font-weight-semibold" style="color: white; letter-spacing: 2px;">{{$item -> mobiles_title}}</h2>
+
+					<img src="{{ asset('assets/landing/sections/home/mobile/hp 1 revisi.png') }}" alt class="img-fluid lazy-load-loaded pt-0 pb-4 d-inline d-lg-none img-mobile-c"/>
+
+					<p class="mb-5" style="color: #cecece;">{{$item -> mobiles_description}}</p>
+					<a href="#download" data-hash data-hash-offset="95" class="btn btn-modern btn-rounded btn-primary mb-4 mb-lg-2 pr-4 pl-4">Documentation</a>
+				</div>
+				<div class="col-lg-2"></div>
+			</div>	
+		@else
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 col-lg-5 order-2 order-lg-1 text-center text-lg-right" style="margin-left: 30px;">
+					<h2 class="custom-bar _left font-weight-semibold" style="color: white; letter-spacing: 2px;">{{$item -> mobiles_title}}</h2>
+
+					<img src="{{ asset('assets/landing/sections/home/mobile/hp 2.png') }}" alt class="img-fluid lazy-load-loaded pt-0 pb-4 d-inline d-lg-none img-mobile-c"/>
+
+					<p class="mb-5" style="color: #cecece;">{{$item -> mobiles_description}}</p>
+					<a href="#download" data-hash data-hash-offset="95" class="btn btn-modern btn-rounded btn-primary mb-2 pr-4 pl-4">Documentation</a>
+				</div>
+				<div class="col-lg-5 order-1 order-lg-2 text-center pb-3">
+					<img src="{{ asset('assets/landing/sections/home/mobile/hp 2.png') }}" class=" lazy-load-loaded d-lg-inline d-none img-mobile-b" />
+				</div>
+				<div class="col-lg-1"></div>
+
+			</div>
+		@endif
+
+		@if ($key < count($datamobile) - 1)
+        	<div class="row justify-content-center d-none d-lg-block" style="margin-bottom: 100px !important;"></div>
+   	 	@endif
+
+		@if ($key === count($datamobile) - 1)
+			<div class="row justify-content-center d-none d-lg-block" style="margin-bottom: 80px !important;"></div>
+		@endif
+	@endforeach
+	@else
 		<div class="row pb-3 justify-content-center">
 			<div class="col-lg-5 text-center pb-3">
 				{{-- <img src="{{ asset('assets/landing/assets/img/feature-01.png') }}" width="70%" alt class="img-fluid lazy-load-loaded d-lg-inline d-none" style="position: relative; top: -30% !important;" /> --}}
@@ -79,8 +134,9 @@
 
 		<div class="row justify-content-center pb-3"></div>
 
-
+	@endif
 	</div>
+	
 </section>
 
 <div class="landing-curve landing-dark-color" style="position: relative;">

@@ -71,24 +71,43 @@
 			
 		</div> --}}
 		<!--end::Hero container-->
-
+	@if($datamain)
 		<div class="d-flex flex-column top-brand-text-container">
 			<div class="top-brand-height">
 				<div class="d-flex">
-					<h1 class="mb-4 mb-md-0"><strong style="font-size: 48px !important; letter-spacing: 2px;">SADATA</strong></h1>
+					<h1 class="mb-4 mb-md-0"><strong style="font-size: 48px !important; letter-spacing: 2px;">{{$datamain-> top_page_text}}</strong></h1>
 				</div>
 				<div class="d-flex">
-					<h1 class="mb-4 mb-md-0 mb-xl-2">Solusi bisnis anda</h1>
+					<h1 class="mb-4 mb-md-0 mb-xl-2">{{$datamain-> top_page_subtext}}</h1>
 				</div>
 				<div class="mb-4 mt-4">
-					<div class="text-4 mb-0">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</div>
-					<div class="text-4">Lorem ipsum dolor sit amet</div>
+					<div style="max-width: 400px; text-align:justify" class="text-4 d-flex flex-wrap mb-0">{{$datamain-> top_page_desc}}</div>
+
 				</div>
 				<div class="mb-lg-0 mb-8">
 					<a data-hash data-hash-offset="95" href="#pricing" class="btn btn-primary btn-outline btn-rounded font-weight-semibold text-4 btn-px-5 btn-py-2" style="border-radius: 10px; margin-top: 20px;">Pelajari lebih lanjut <i class="fa fa-arrow-circle-right" style="margin-left: 3px; font-size: 14px !important;"></i></a>
 				</div>
 			</div>
 		</div>
+	@else
+		<div class="d-flex flex-column top-brand-text-container">
+			<div class="top-brand-height">
+				<div class="d-flex">
+					<h1 class="mb-4 mb-md-0"><strong style="font-size: 48px !important; letter-spacing: 2px;">Lorem.</strong></h1>
+				</div>
+				<div class="d-flex">
+					<h1 class="mb-4 mb-md-0 mb-xl-2">Lorem, ipsum dolor.</h1>
+				</div>
+				<div class="mb-4 mt-4">
+					<div style="max-width: 400px; text-align:justify" class="text-4 d-flex flex-wrap mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dolore!</div>
+
+				</div>
+				<div class="mb-lg-0 mb-8">
+					<a data-hash data-hash-offset="95" href="#pricing" class="btn btn-primary btn-outline btn-rounded font-weight-semibold text-4 btn-px-5 btn-py-2" style="border-radius: 10px; margin-top: 20px;">Pelajari lebih lanjut <i class="fa fa-arrow-circle-right" style="margin-left: 3px; font-size: 14px !important;"></i></a>
+				</div>
+			</div>
+		</div>
+	@endif
 
 		{{-- <img src="https://keenthemes.com/metronic/assets/media/misc/hero-visuals.png" class="app-hero-img" alt=""> --}}
 		<img src="{{ asset('assets/landing/img/top-brand-01.png') }}" class="app-hero-img" alt="">
@@ -103,20 +122,33 @@
 <div class="container position-relative pt-2 pb-4 d-lg-none d-flex" id="home">
 	<div class="row">
 			
+	@if($datamain)
 		<div class="col-lg-12 text-center ">
-			<h1 class="mb-2 mb-md-0"><strong style="font-size: 48px !important; letter-spacing: 2px;">SADATA</strong></h1>
+			<h1 class="mb-2 mb-md-0"><strong style="font-size: 48px !important; letter-spacing: 2px;">{{$datamain-> top_page_text}}</strong></h1>
 		</div>
 		<div class="col-lg-12 text-center ">
-			<h1 class="mb-2 mb-md-0 mb-xl-2">Solusi bisnis anda</h1>
+			<h1 class="mb-2 mb-md-0 mb-xl-2">{{$datamain-> top_page_subtext}}</h1>
 		</div>
 		<div class="col-lg-12 text-center mb-4 mt-4">
-			<div class="text-4 mb-0">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet</div>
-			<div class="text-4">Lorem ipsum dolor sit amet</div>
+			<div class="text-4 mb-0">{{$datamain-> top_page_desc}}</div>
 		</div>
 		<div class="col-lg-12 text-center mb-lg-0 mb-8">
 			<a data-hash data-hash-offset="95" href="#pricing" class="btn btn-primary btn-outline btn-rounded font-weight-semibold text-4 btn-px-5 btn-py-2" style="border-radius: 10px; margin-top: 20px;">Pelajari lebih lanjut <i class="fa fa-arrow-circle-right" style="margin-left: 3px; font-size: 14px !important;"></i></a>
 		</div>
-								
+	@else
+		<div class="col-lg-12 text-center ">
+			<h1 class="mb-2 mb-md-0"><strong style="font-size: 48px !important; letter-spacing: 2px;">Lorem.</strong></h1>
+		</div>
+		<div class="col-lg-12 text-center ">
+			<h1 class="mb-2 mb-md-0 mb-xl-2">Lorem, ipsum dolor.</h1>
+		</div>
+		<div class="col-lg-12 text-center mb-4 mt-4">
+			<div style="text-align: justify" class="text-4 mb-0">Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illum harum dicta blanditiis ad!</div>
+		</div>
+		<div class="col-lg-12 text-center mb-lg-0 mb-8">
+			<a data-hash data-hash-offset="95" href="#pricing" class="btn btn-primary btn-outline btn-rounded font-weight-semibold text-4 btn-px-5 btn-py-2" style="border-radius: 10px; margin-top: 20px;">Pelajari lebih lanjut <i class="fa fa-arrow-circle-right" style="margin-left: 3px; font-size: 14px !important;"></i></a>
+		</div>
+	@endif						
 	</div>
 
 </div>

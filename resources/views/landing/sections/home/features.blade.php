@@ -8,19 +8,45 @@
 		    	</div>
 		    </div>
 		    <div class="row text-center">
-		    	<div class="col-lg-12 d-lg-none d-block mb-3">
-		    		<img src="{{ asset('assets/landing/assets/img/include.png') }}" width="100%" class="pr-2">
+		    	<div class="col-lg-12 d-lg-none d-block mb-3 ft-img">
+		    		<img src="{{ asset('assets/landing/assets/img/include.png') }}" width="100%" class="pr-2" id="featureImage">
 		    	</div>
 		    </div>
 		    <div class="row">
-		    	<div class="col-lg-6 d-none d-lg-flex">
-		    		<img src="{{ asset('assets/landing/assets/img/include.png') }}" width="100%" class="pr-2">
+		    	<div class="col-lg-6 d-none d-lg-flex ft-img">
+		    		<img src="{{ asset('assets/landing/assets/img/include.png') }}" width="100%" class="pr-2" id="featureImage">
 		    	</div>
 		    	<div class="col-lg-1 d-none d-lg-flex">
 		    	</div>
 			    <div class="col-lg-5 col-12">
-				    <div id="accordion" class="accordion-custom">
-			            <div class="card card-selected">
+				    <div id="accordion" class="accordion-custom" style="max-height: 400px; overflow-y:auto">
+						@if (count($datafitur) > 0)
+			            @foreach($datafitur as $key => $fitur)
+							<div class="card {{ $key === 0 ? 'card-selected' : '' }}">
+								<a class="card-header card-link" data-toggle="collapse" href="#description{{ $key }}" data-image="{{ Storage::url($fitur->image_path) }}">
+									<i class="fa fa-question-circle" style="margin-right: 3px; color: {{ $key === 0 ? '#36C097' : '#FD7373' }};"></i>
+									
+									{{$fitur -> points_title}}
+									
+									<i class="fa fa-chevron-up card-header-icon"></i>
+								</a>
+								<div id="description{{ $key }}" class="collapse {{ $key === 0 ? 'show' : '' }}" data-parent="#accordion">
+									<div class="card-body">
+										<div>
+											{{$fitur -> points_description}}
+										</div>
+										
+										<div class="mt-4">
+											<a href="javascript:void(0);" style="color: #403FAB !important; text-decoration: none; font-weight: 600;">
+												Pelajari lebih lanjut <i class="fa fa-arrow-circle-right" style="margin-left: 3px; font-size: 14px !important;"></i>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						@endforeach
+						@else
+						<div class="card card-selected">
 		                    <a class="card-header card-link" data-toggle="collapse"
 		                        href="#description1">
 		                        <i class="fa fa-question-circle" style="margin-right: 3px; color: #36C097;"></i>
@@ -97,7 +123,6 @@
 			                    </div>
 			                </div>
 			            </div>
-
 			            <div class="card">
 		                    <a class="collapsed card-header card-link"
 		                        data-toggle="collapse"
@@ -124,9 +149,8 @@
 			                    </div>
 			                </div>
 			            </div>
-			            
+						@endif
 			        </div>
-
 			    </div>
 		    </div>
 	    </div>						

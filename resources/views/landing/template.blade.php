@@ -115,6 +115,22 @@
 			$( document ).ready(function() {
 			    $('#card-1').click();
 			});
+
+			$(document).ready(function () {
+				// Dapatkan URL gambar dari atribut data-image tautan pertama saat halaman dimuat
+				var defaultImageUrl = $('.card-link:first').data('image');
+
+				// Atur src gambar di atasnya dengan URL gambar default
+				$('.ft-img img').attr('src', defaultImageUrl);
+
+				$('.card-link').click(function () {
+					// Dapatkan URL gambar dari atribut data-image tautan yang ditekan
+					var imageUrl = $(this).data('image');
+
+					// Ubah src gambar di atasnya dengan URL gambar yang didapatkan
+					$('.ft-img img').attr('src', imageUrl);
+				});
+			});
 		</script>
 	</body>
 </html>

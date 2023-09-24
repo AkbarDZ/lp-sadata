@@ -38,7 +38,7 @@ License: For each use you must have a valid license purchased only from above li
     <meta property="og:url" content="https://keenthemes.com/metronic">
     <meta property="og:site_name" content="Keenthemes | Metronic">
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8">
-    <link rel="shortcut icon" href="{{ asset('media/logos/sadataLogo.png') }}">
+    <link rel="shortcut icon" href="{{ asset('/metronic8/demo8/assets/media/logos/sadataLogo.png') }}">
 
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
@@ -47,25 +47,30 @@ License: For each use you must have a valid license purchased only from above li
     <!--Font awesome-->
 
     <!--begin::Vendor Stylesheets(used for this page only)-->
-    <link href="{{ asset('plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/metronic8/demo8/assets/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet"
+        type="text/css">
     <!--end::Vendor Stylesheets-->
 
 
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-    <link href="{{ asset('plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/style.bundle.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/style.bundle.css.map') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/edit.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/dropdown.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/metronic8/demo8/assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet"
+        type="text/css">
+    <link href="{{ asset('/metronic8/demo8/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css">
+</head>
+
+<body id="kt_body" class="aside-enabled">
+    {{-- <link href="{{ asset('/metronic8/demo8/assets/css/style.bundle.rtl.css') }}" rel="stylesheet" type="text/css">
+    --}}
+    <link href="{{ asset('/metronic8/demo8/assets/css/edit.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/metronic8/demo8/assets/css/custom.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/metronic8/demo8/assets/css/dropdown.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/metronic8/demo8/assets/css/style.bundle.css.map') }}" rel="stylesheet" type="text/css">
     <!--end::Global Stylesheets Bundle-->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
         integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--Begin::Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -82,7 +87,6 @@ License: For each use you must have a valid license purchased only from above li
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-5FS8GGP');
-
     </script>
     <!--End::Google Tag Manager -->
 
@@ -91,14 +95,14 @@ License: For each use you must have a valid license purchased only from above li
         if (window.top != window.self) {
             window.top.location.replace(window.self.location.href);
         }
-
     </script>
 
+    <!--end::Head-->
 
-</head>
+    <!--begin::Body-->
 
-<body id="kt_body" class="aside-enabled">
 
+    <!--begin::Theme mode setup on page load-->
     <script>
         var defaultThemeMode = "light";
         var themeMode;
@@ -120,7 +124,6 @@ License: For each use you must have a valid license purchased only from above li
 
             document.documentElement.setAttribute("data-bs-theme", themeMode);
         }
-
     </script>
     <!--end::Theme mode setup on page load-->
     <!--Begin::Google Tag Manager (noscript) -->
@@ -149,72 +152,79 @@ License: For each use you must have a valid license purchased only from above li
                         <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
                             id="#kt_aside_menu" data-kt-menu="true">
 
+                            <div class="separator mx-1 my-2"></div>
+
+                            {{-- dashboard menu --}}
+                            <div class="menu-item">
+                                <a class="menu-link" href="#">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+                                        <span>
+                                            <i class="fa-solid fa-chart-pie fs-4"></i>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Dashboards</span>
+                                </a>
+                            </div>
+
+                            {{-- log activity --}}
+                            <div class="menu-item">
+                                <a class="menu-link" href="#">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+                                        <span>
+                                            <i class="fa-solid fa-book fs-4"></i>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Log Activity</span>
+                                </a>
+                            </div>
+
+                            <div class="separator mx-1 my-2"></div>
+
                             <div class="menu-item">
                                 <div class="menu-content pt-8 pb-2">
-                                    <span class="menu-section text-muted text-uppercase fs-5 ls-1">Landing Page</span>
-                                </div>
-                            </div>                       
-
-                            {{-- Beranda --}}
-                            <div data-kt-menu-trigger="click" class="menu-item {{ request()->is('beranda/main','beranda/apps','beranda/fitur','beranda/mobile','beranda/summary') ? 'here show' : '' }} menu-accordion">
-                                <span class="menu-link">
-                                    <span class="menu-icon">
-                                        <i class="fa-solid fa-house fs-4"></i>
-                                    </span>
-                                    <span class="menu-title">Beranda</span>
-                                    <span class="menu-arrow"></span>
-                                </span>
-                                <div class="menu-sub menu-sub-accordion menu-active-bg">
-                                    <div class="menu-item">
-                                        <a class="menu-link {{ request()->is('beranda/main') ? 'active' : '' }}" href="{{ route('beranda.main') }}">
-                                            <span class="menu-bullet">
-                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
-                                            </span>
-                                            <span class="menu-title">Main Content</span>
-                                        </a>
-                                    </div>
-                                    <div class="menu-item">
-                                        <a class="menu-link {{ request()->is('beranda/apps') ? 'active' : '' }}" href="{{ route('beranda.apps') }}">
-                                            <span class="menu-bullet">
-                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
-                                            </span>
-                                            <span class="menu-title">Section Sadata Apps</span>
-                                        </a>
-                                    </div>
-                                    <div class="menu-item">
-                                        <a class="menu-link {{ request()->is('beranda/fitur') ? 'active' : '' }}" href="{{ route('beranda.fitur') }}">
-                                            <span class="menu-bullet">
-                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
-                                            </span>
-                                            <span class="menu-title">Section Feature</span>
-                                        </a>
-                                    </div>
-                                    <div class="menu-item">
-                                        <a class="menu-link {{ request()->is('beranda/mobile') ? 'active' : '' }}" href="{{ route('beranda.mobile') }}">
-                                            <span class="menu-bullet">
-                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
-                                            </span>
-                                            <span class="menu-title">Section Mobile</span>
-                                        </a>
-                                    </div>
-                                    <div class="menu-item">
-                                        <a class="menu-link {{ request()->is('beranda/summary') ? 'active' : '' }}" href="{{ route('beranda.summary') }}">
-                                            <span class="menu-bullet">
-                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
-                                            </span>
-                                            <span class="menu-title">Section Summary</span>
-                                        </a>
-                                    </div>
+                                    <span class="menu-section text-muted text-uppercase fs-5 ls-1">ITINERARY</span>
                                 </div>
                             </div>
 
-                            {{-- Fitur --}}
+                            {{-- Manage Itinerary --}}
+                            <div class="menu-item">
+                                <a class="menu-link" href="#">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+                                        <span>
+                                            <i class="fa-solid fa-calendar-days fs-4"></i>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Manage Itinerary</span>
+                                </a>
+                            </div>
+
+                            {{-- Upload Itinerary --}}
+                            <div class="menu-item">
+                                <a class="menu-link" href="#">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+                                        <span>
+                                            <i class="fa-solid fa-calendar-plus fs-4"></i>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Upload Itinerary</span>
+                                </a>
+                            </div>
+
+                            {{-- Approval --}}
                             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                 <span class="menu-link">
                                     <span class="menu-icon">
-                                        <i class="fa-solid fa-bars fs-4"></i>
+                                        <i class="fa-solid fa-calendar-check fs-4"></i>
                                     </span>
-                                    <span class="menu-title">Fitur</span>
+                                    <span class="menu-title">Approval(s)</span>
                                     <span class="menu-arrow"></span>
                                 </span>
                                 <div class="menu-sub menu-sub-accordion menu-active-bg">
@@ -223,7 +233,7 @@ License: For each use you must have a valid license purchased only from above li
                                             <span class="menu-bullet">
                                                 <i class="fa-solid fa-circle-chevron-right fs-7"></i>
                                             </span>
-                                            <span class="menu-title">Navbar Item</span>
+                                            <span class="menu-title">Sakit/Izin/Cuti/Off</span>
                                         </a>
                                     </div>
                                     <div class="menu-item">
@@ -231,7 +241,7 @@ License: For each use you must have a valid license purchased only from above li
                                             <span class="menu-bullet">
                                                 <i class="fa-solid fa-circle-chevron-right fs-7"></i>
                                             </span>
-                                            <span class="menu-title">Section Judul Fitur</span>
+                                            <span class="menu-title">Out Itinerary</span>
                                         </a>
                                     </div>
                                     <div class="menu-item">
@@ -239,54 +249,10 @@ License: For each use you must have a valid license purchased only from above li
                                             <span class="menu-bullet">
                                                 <i class="fa-solid fa-circle-chevron-right fs-7"></i>
                                             </span>
-                                            <span class="menu-title">Section A</span>
+                                            <span class="menu-title">Store Location Update</span>
                                         </a>
                                     </div>
-                                    <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/charts.html">
-                                            <span class="menu-bullet">
-                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
-                                            </span>
-                                            <span class="menu-title">Section B</span>
-                                        </a>
-                                    </div>
-                                    <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/charts.html">
-                                            <span class="menu-bullet">
-                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
-                                            </span>
-                                            <span class="menu-title">Section Card</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
 
-                            {{-- Harga --}}
-                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-                                <span class="menu-link">
-                                    <span class="menu-icon">
-                                        <i class="fa-solid fa-dollar-sign fs-4"></i>
-                                    </span>
-                                    <span class="menu-title">Harga</span>
-                                    <span class="menu-arrow"></span>
-                                </span>
-                                <div class="menu-sub menu-sub-accordion menu-active-bg">
-                                    <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/lists.html">
-                                            <span class="menu-bullet">
-                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
-                                            </span>
-                                            <span class="menu-title">Main Content</span>
-                                        </a>
-                                    </div>
-                                    <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/statistics.html">
-                                            <span class="menu-bullet">
-                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
-                                            </span>
-                                            <span class="menu-title">Price Tag</span>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
 
@@ -1219,7 +1185,8 @@ License: For each use you must have a valid license purchased only from above li
                     <div class="header-brand">
                         <!--begin::Logo-->
                         <a href="#">
-                            <img src="{{ asset('media/logos/sadata.png') }}" alt="" class="" style="height: 34px">
+                            <img src="{{ asset('/metronic8/demo8/assets/media/logos/sadata.png') }}" alt="" class=""
+                                style="height: 34px">
                         </a>
                         <!--end::Logo-->
                         <!--begin::Aside minimize-->
@@ -1337,8 +1304,8 @@ License: For each use you must have a valid license purchased only from above li
                                 <div class="d-flex align-items-center">
                                     <!--begin::Theme mode docs-->
 
-                                    <img src="{{ asset('media/avatars/profiles.png') }}" alt="" class=""
-                                        style="height: 36px" data-kt-menu-trigger="click"
+                                    <img src="{{ asset('/metronic8/demo8/assets/media/avatars/profiles.png') }}" alt=""
+                                        class="" style="height: 36px" data-kt-menu-trigger="click"
                                         data-kt-menu-placement="bottom-end">
                                     <!--end::Theme mode docs-->
 
@@ -1383,15 +1350,700 @@ License: For each use you must have a valid license purchased only from above li
 
                 <!--end::Header-->
                 <!--begin::Content-->
-              <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-                <div class="post d-flex flex-column-fluid" id="kt_post">
-                    <div id="kt_content_container" class=" container-xxl">
-                        @yield('content')
-                    </div>
-                </div>
-              </div>
-                <!--end::Content-->
+                <div class="content d-flex flex-column flex-column-fluid " id="kt_content">
+                    <!--begin::Post-->
+                    <div class="post d-flex flex-column-fluid" id="kt_post">
+                        <!--begin::Container-->
+                        <div id="kt_content_container" class=" container-xxl ">
+                            <!--begin::Stepper-->
+                            <div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid gap-10"
+                                id="kt_create_account_stepper">
+                                <!--begin::Aside-->
+                                <div
+                                    class="card d-flex justify-content-center justify-content-xl-start flex-row-auto w-100 w-xl-300px w-xxl-400px">
+                                    <!--begin::Wrapper-->
+                                    <div class="card-body px-6 px-lg-10 px-xxl-15 py-20">
+                                        <!--begin::Nav-->
+                                        <div class="stepper-nav">
+                                            <!--begin::Step 1-->
+                                            <div class="stepper-item current" data-kt-stepper-element="nav">
+                                                <!--begin::Line-->
+                                                <div class="stepper-line w-40px"></div>
+                                                <!--end::Line-->
+                                                <!--begin::Icon-->
+                                                <div class="stepper-icon w-40px h-40px">
+                                                    <i class="stepper-check fas fa-check"></i>
+                                                    <span class="stepper-number">1</span>
+                                                </div>
+                                                <!--end::Icon-->
+                                                <!--begin::Label-->
+                                                <div class="stepper-label">
+                                                    <h3 class="stepper-title">Product</h3>
+                                                    <div class="stepper-desc fw-bold">Setup Your Product Details</div>
+                                                </div>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Step 1-->
+                                            <!--begin::Step 2-->
+                                            <div class="stepper-item" data-kt-stepper-element="nav">
+                                                <!--begin::Line-->
+                                                <div class="stepper-line w-40px"></div>
+                                                <!--end::Line-->
+                                                <!--begin::Icon-->
+                                                <div class="stepper-icon w-40px h-40px">
+                                                    <i class="stepper-check fas fa-check"></i>
+                                                    <span class="stepper-number">2</span>
+                                                </div>
+                                                <!--end::Icon-->
+                                                <!--begin::Label-->
+                                                <div class="stepper-label">
+                                                    <h3 class="stepper-title">Brand</h3>
+                                                    <div class="stepper-desc fw-bold">Setup Your Brand Details</div>
+                                                </div>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Step 2-->
+                                            <!--begin::Step 3-->
+                                            <div class="stepper-item" data-kt-stepper-element="nav">
+                                                <!--begin::Line-->
+                                                <div class="stepper-line w-40px"></div>
+                                                <!--end::Line-->
+                                                <!--begin::Icon-->
+                                                <div class="stepper-icon w-40px h-40px">
+                                                    <i class="stepper-check fas fa-check"></i>
+                                                    <span class="stepper-number">3</span>
+                                                </div>
+                                                <!--end::Icon-->
+                                                <!--begin::Label-->
+                                                <div class="stepper-label">
+                                                    <h3 class="stepper-title">Category</h3>
+                                                    <div class="stepper-desc fw-bold">Setup Your Category Details</div>
+                                                </div>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Step 3-->
+                                            <!--begin::Step 4-->
+                                            <div class="stepper-item" data-kt-stepper-element="nav">
+                                                <!--begin::Line-->
+                                                <div class="stepper-line w-40px"></div>
+                                                <!--end::Line-->
+                                                <!--begin::Icon-->
+                                                <div class="stepper-icon w-40px h-40px">
+                                                    <i class="stepper-check fas fa-check"></i>
+                                                    <span class="stepper-number">4</span>
+                                                </div>
+                                                <!--end::Icon-->
+                                                <!--begin::Label-->
+                                                <div class="stepper-label">
+                                                    <h3 class="stepper-title">Packaging</h3>
+                                                    <div class="stepper-desc fw-bold">Setup Your Packaging Details
+                                                    </div>
+                                                </div>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Step 4-->
+                                            <!--begin::Step 5-->
+                                            <div class="stepper-item" data-kt-stepper-element="nav">
+                                                <!--begin::Line-->
+                                                <div class="stepper-line w-40px"></div>
+                                                <!--end::Line-->
+                                                <!--begin::Icon-->
+                                                <div class="stepper-icon w-40px h-40px">
+                                                    <i class="stepper-check fas fa-check"></i>
+                                                    <span class="stepper-number">5</span>
+                                                </div>
+                                                <!--end::Icon-->
+                                                <!--begin::Label-->
+                                                <div class="stepper-label">
+                                                    <h3 class="stepper-title">Completed</h3>
+                                                    <div class="stepper-desc fw-bold">Woah, we are here</div>
+                                                </div>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Step 5-->
+                                        </div>
+                                        <!--end::Nav-->
+                                    </div>
+                                    <!--end::Wrapper-->
+                                </div>
+                                <!--begin::Aside-->
 
+                                <!--begin::Content-->
+                                <div class="card d-flex flex-row-fluid flex-center">
+                                    <!--begin::Form-->
+                                    <form class="card-body py-20 w-100 mw-xl-700px px-9" novalidate="novalidate"
+                                        id="kt_create_account_form">
+                                        <!--begin::Step 1-->
+                                        <div class="current" data-kt-stepper-element="content">
+                                            <!--begin::Wrapper-->
+                                            <div class="w-100">
+                                                <!--begin::Heading-->
+                                                <div class="pb-10 pb-lg-15">
+                                                    <!--begin::Title-->
+                                                    <!--begin::Title-->
+                                                    <h2 class="fw-bolder d-flex align-items-center text-dark">Choose
+                                                        Product
+                                                        <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                                            data-bs-toggle="tooltip"
+                                                            title="Billing is issued based on your selected account type"></i>
+                                                    </h2>
+                                                    <!--end::Title-->
+                                                    <!--begin::Notice-->
+                                                    <div class="text-muted fw-bold fs-6">If you need more info, please
+                                                        check out
+                                                        <a href="#" class="link-primary fw-bolder">Help
+                                                            Page</a>.
+                                                    </div>
+                                                    <!--end::Notice-->
+                                                    <!--end::Title-->
+
+
+                                                </div>
+                                                <!--end::Heading-->
+
+                                                <!--begin::Input group-->
+                                                <div class="fv-row">
+                                                    <!--begin::Row-->
+                                                    <div class="row">
+                                                        <!--begin::Col-->
+
+                                                        <!--begin::Input group-->
+                                                        <div class="fv-row mb-5">
+                                                            <!--begin::Label-->
+                                                            <label class="form-label required fw-bolder">Nama
+                                                                Product</label>
+                                                            <!--end::Label-->
+                                                            <!--begin::Input-->
+                                                            <input type="text"
+                                                                class="form-control form-control-lg form-control-solid"
+                                                                name="product_name" placeholder="" value="">
+                                                            <!--end::Input-->
+                                                        </div>
+
+                                                        {{-- SAP NAME --}}
+
+                                                        <div class="fv-row mb-5">
+                                                            <!--begin::Label-->
+                                                            <label class="form-label  fw-bolder">SAP Name</label>
+                                                            <!--end::Label-->
+                                                            <!--begin::Input-->
+                                                            <input type="text"
+                                                                class="form-control form-control-lg form-control-solid"
+                                                                name="" placeholder="" value="">
+
+                                                        </div>
+                                                        {{-- END SAP NAME --}}
+
+                                                        <!--begin::Input group-->
+                                                        <div class="row mb-5">
+                                                            <!--begin::Col-->
+                                                            <div class="col-md-6 fv-row">
+                                                                <!--begin::Label-->
+                                                                <label
+                                                                    class="required fs-5 fw-bold mb-2 fw-bolder">Code</label>
+                                                                <!--end::Label-->
+                                                                <!--begin::Input-->
+                                                                <input type="text"
+                                                                    class="form-control form-control-lg form-control-solid"
+                                                                    name="code" placeholder="" value="">
+                                                                <!--end::Input-->
+                                                            </div>
+                                                            <!--end::Col-->
+                                                            <!--begin::Col-->
+                                                            <div class="col-md-6 fv-row">
+                                                                <!--end::Label-->
+                                                                <label class="form-label  fw-bolder">SAP Code</label>
+                                                                <!--end::Label-->
+                                                                <!--end::Input-->
+                                                                <input type="text"
+                                                                    class="form-control form-control-lg form-control-solid"
+                                                                    name="" placeholder="" value="" style="width: 106%">
+                                                                <!--end::Input-->
+                                                            </div>
+                                                            <!--end::Col-->
+                                                        </div>
+                                                        <!--end::Input group-->
+
+                                                        <div class="row mb-5">
+                                                            <!--end::Label-->
+                                                            <label class="required fs-5 fw-bold mb-5 fw-bolder ">Photo
+                                                                Product</label>
+                                                            <!--end::Label-->
+                                                            <div class="col-lg-8">
+                                                                <!--begin::Image input-->
+                                                                <div class="image-input image-input-outline"
+                                                                    data-kt-image-input="true"
+                                                                    style="background-image: url('/metronic8/demo8/assets/media/svg/files/blank-image.svg')">
+                                                                    <!--begin::Preview existing avatar-->
+                                                                    <div class="image-input-wrapper w-125px h-125px"
+                                                                        style="background-image: url('/metronic8/demo8/assets/media/svg/files/blank-image.svg')">
+
+                                                                    </div>
+                                                                    <!--end::Preview existing avatar-->
+                                                                    <!--begin::Label-->
+                                                                    <label
+                                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                                        data-kt-image-input-action="change"
+                                                                        data-bs-toggle="tooltip" title="Change product">
+                                                                        <i class="bi bi-pencil-fill fs-7"></i>
+                                                                        <!--begin::Inputs-->
+                                                                        <input type="file" name="avatar"
+                                                                            accept=".png, .jpg, .jpeg">
+                                                                        <input type="hidden" name="avatar_remove">
+                                                                        <!--end::Inputs-->
+                                                                    </label>
+                                                                    <!--end::Label-->
+                                                                    <!--begin::Cancel-->
+                                                                    <span
+                                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                                        data-kt-image-input-action="cancel"
+                                                                        data-bs-toggle="tooltip" title="Cancel product">
+                                                                        <i class="bi bi-x fs-2"></i>
+                                                                    </span>
+                                                                    <!--end::Cancel-->
+                                                                    <!--begin::Remove-->
+                                                                    <span
+                                                                        class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                                                        data-kt-image-input-action="remove"
+                                                                        data-bs-toggle="tooltip" title="Remove product">
+                                                                        <i class="bi bi-x fs-2"></i>
+                                                                    </span>
+                                                                    <!--end::Remove-->
+                                                                </div>
+                                                                <!--end::Image input-->
+                                                                <!--begin::Hint-->
+                                                                <div class="form-text">Allowed file types: png, jpg,
+                                                                    jpeg.</div>
+                                                                <!--end::Hint-->
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <!--end::Row-->
+                                                </div>
+                                                <!--end::Input group-->
+                                            </div>
+                                            <!--end::Wrapper-->
+                                        </div>
+                                        <!--end::Step 1-->
+
+                                        <!--begin::Step 2-->
+                                        <div data-kt-stepper-element="content">
+                                            <!--begin::Wrapper-->
+                                            <div class="w-100">
+                                                <!--begin::Heading-->
+                                                <div class="pb-10 pb-lg-15">
+                                                    <!--begin::Title-->
+                                                    <!--begin::Title-->
+                                                    <h2 class="fw-bolder d-flex align-items-center text-dark">Choose
+                                                        Brand
+                                                        <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                                            data-bs-toggle="tooltip"
+                                                            title="Billing is issued based on your selected account type"></i>
+                                                    </h2>
+                                                    <!--end::Title-->
+                                                    <!--begin::Notice-->
+                                                    <div class="text-muted fw-bold fs-6">If you need more info, please
+                                                        check out
+                                                        <a href="#" class="link-primary fw-bolder">Help
+                                                            Page</a>.
+                                                    </div>
+                                                    <!--end::Notice-->
+                                                    <!--end::Title-->
+
+
+                                                </div>
+                                                <!--end::Heading-->
+
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-5">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label required fw-bolder">Variant</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text"
+                                                        class="form-control form-control-lg form-control-solid"
+                                                        name="variant_name" placeholder="" value="">
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <div class="fv-row mb-5">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label required fw-bolder">Classification</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text"
+                                                        class="form-control form-control-lg form-control-solid"
+                                                        name="classifacition_name" placeholder="" value="">
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-5">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label required fw-bolder">realese</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text"
+                                                        class="form-control form-control-lg form-control-solid"
+                                                        name="realese_name" placeholder="" value="">
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                            </div>
+                                            <!--end::Wrapper-->
+                                        </div>
+                                        <!--end::Step 2-->
+
+                                        <!--begin::Step 3-->
+                                        <div data-kt-stepper-element="content">
+                                            <!--begin::Wrapper-->
+                                            <div class="w-100">
+                                                <!--begin::Heading-->
+                                                <div class="pb-10 pb-lg-15">
+                                                    <!--begin::Title-->
+                                                    <!--begin::Title-->
+                                                    <h2 class="fw-bolder d-flex align-items-center text-dark">Choose
+                                                        Category
+                                                        <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                                            data-bs-toggle="tooltip"
+                                                            title="Billing is issued based on your selected account type"></i>
+                                                    </h2>
+                                                    <!--end::Title-->
+                                                    <!--begin::Notice-->
+                                                    <div class="text-muted fw-bold fs-6">If you need more info, please
+                                                        check out
+                                                        <a href="#" class="link-primary fw-bolder">Help
+                                                            Page</a>.
+                                                    </div>
+                                                    <!--end::Notice-->
+                                                    <!--end::Title-->
+
+
+                                                </div>
+                                                <!--end::Heading-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-5">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label required fw-bolder">Origin</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Input-->
+                                                    <select name="origin"
+                                                        class="form-select form-select-lg form-select-solid"
+                                                        data-control="select2" data-placeholder="Select data"
+                                                        data-allow-clear="true" data-hide-search="true">
+                                                        <option></option>
+                                                        <option value="1">S Corporation</option>
+                                                        <option value="1">C Corporation</option>
+                                                        <option value="2">Sole Proprietorship</option>
+                                                        <option value="3">Non-profit</option>
+                                                        <option value="4">Limited Liability</option>
+                                                        <option value="5">General Partnership</option>
+                                                    </select>
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-5">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label required fw-bolder">Group</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Input-->
+                                                    <select name="group"
+                                                        class="form-select form-select-lg form-select-solid"
+                                                        data-control="select2" data-placeholder="Select data"
+                                                        data-allow-clear="true" data-hide-search="true">
+                                                        <option></option>
+                                                        <option value="1">S Corporation</option>
+                                                        <option value="1">C Corporation</option>
+                                                        <option value="2">Sole Proprietorship</option>
+                                                        <option value="3">Non-profit</option>
+                                                        <option value="4">Limited Liability</option>
+                                                        <option value="5">General Partnership</option>
+                                                    </select>
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-5">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label required fw-bolder">Size</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Input-->
+                                                    <select name="size" class="form-select form-select-solid"
+                                                        data-control="select2" data-placeholder="Select an option">
+                                                        <option></option>
+                                                        <option value="1">Size 1</option>
+                                                        <option value="2">Size 2</option>
+                                                        <option value="2">Size 3</option>
+                                                        <option value="2">Size 4</option>
+                                                    </select>
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                                <!--begin::Input group-->
+                                                <div class="fv-row mb-5">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label required fw-bolder">Hierarchy</label>
+                                                    <!--end::Label-->
+
+                                                    <!--begin::Input-->
+                                                    <select name="hierarchy" class="form-select form-select-solid"
+                                                        data-control="select2" data-placeholder="Select an option">
+                                                        <option></option>
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="2">Option 3</option>
+                                                        <option value="2">Option 4</option>
+                                                    </select>
+                                                    <!--end::Input-->
+                                                </div>
+                                                <!--end::Input group-->
+                                            </div>
+                                            <!--end::Wrapper-->
+
+                                        </div>
+                                        <!--end::Step 3-->
+
+                                        <!--begin::Step 4-->
+                                        <div data-kt-stepper-element="content">
+                                            <!--begin::Wrapper-->
+                                            <div class="w-100">
+                                                <!--begin::Heading-->
+                                                <div class="pb-10 pb-lg-15">
+                                                    <!--begin::Title-->
+                                                    <!--begin::Title-->
+                                                    <h2 class="fw-bolder d-flex align-items-center text-dark">Choose
+                                                        Packaging
+                                                        <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                                            data-bs-toggle="tooltip"
+                                                            title="Billing is issued based on your selected account type"></i>
+                                                    </h2>
+                                                    <!--end::Title-->
+                                                    <!--begin::Notice-->
+                                                    <div class="text-muted fw-bold fs-6">If you need more info, please
+                                                        check out
+                                                        <a href="#" class="link-primary fw-bolder">Help
+                                                            Page</a>.
+                                                    </div>
+                                                    <!--end::Notice-->
+                                                    <!--end::Title-->
+
+
+                                                </div>
+                                                <!--end::Heading-->
+
+
+                                                <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-5 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label
+                                                        class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                                                        <span class="required fw-bolder">Packaging</span>
+
+
+                                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                                            title="Specify a card holder's name">
+                                                            <i class="ki-duotone ki-information-5 text-gray-500 fs-6"><span
+                                                                    class="path1"></span><span
+                                                                    class="path2"></span><span
+                                                                    class="path3"></span></i></span> </label>
+                                                    <!--end::Label-->
+
+                                                    <input type="text" class="form-control form-control-solid"
+                                                        placeholder="" name="packaging" value="">
+                                                </div>
+                                                <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-5 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label
+                                                        class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                                                        <span class="required fw-bolder">Package Content</span>
+
+
+                                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                                            title="Specify a card holder's name">
+                                                            <i class="ki-duotone ki-information-5 text-gray-500 fs-6"><span
+                                                                    class="path1"></span><span
+                                                                    class="path2"></span><span
+                                                                    class="path3"></span></i></span> </label>
+                                                    <!--end::Label-->
+
+                                                    <input type="text" class="form-control form-control-solid"
+                                                        placeholder="" name="packaging_content" value="">
+                                                </div>
+                                                <!--end::Input group-->
+
+                                                <!--begin::Input group-->
+                                                <div class="d-flex flex-column mb-5 fv-row">
+                                                    <!--begin::Label-->
+                                                    <label
+                                                        class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                                                        <span class="required fw-bolder">Grammage</span>
+
+
+                                                        <span class="ms-1" data-bs-toggle="tooltip"
+                                                            title="Specify a card holder's name">
+                                                            <i class="ki-duotone ki-information-5 text-gray-500 fs-6"><span
+                                                                    class="path1"></span><span
+                                                                    class="path2"></span><span
+                                                                    class="path3"></span></i></span> </label>
+                                                    <!--end::Label-->
+
+                                                    <input type="text" class="form-control form-control-solid"
+                                                        placeholder="" name="grammage" value="">
+                                                </div>
+                                                <!--end::Input group-->
+
+
+                                                <!--end::Input group-->
+
+
+
+                                            </div>
+                                            <!--end::Wrapper-->
+                                        </div>
+                                        <!--end::Step 4-->
+
+                                        <!--begin::Step 5-->
+                                        <div data-kt-stepper-element="content">
+
+
+                                            <!--begin::Wrapper-->
+                                            <div class="w-100">
+                                                <!--begin::Heading-->
+                                                <div class="pb-8 pb-lg-10">
+                                                    <!--begin::Title-->
+                                                    <h2 class="fw-bold text-dark">Your Are Done!</h2>
+                                                    <!--end::Title-->
+
+                                                    <!--begin::Notice-->
+                                                    <div class="text-muted fw-semibold fs-6">
+                                                        If you need more info, please
+                                                        .
+                                                    </div>
+                                                    <!--end::Notice-->
+                                                </div>
+                                                <!--end::Heading-->
+
+                                                <!--begin::Body-->
+                                                <div class="mb-0">
+                                                    <!--begin::Text-->
+                                                    <div class="fs-6 text-gray-600 mb-5">
+                                                        Writing headlines for blog posts is as much an art as it is a
+                                                        science
+                                                        and probably warrants its own post, but for all advise is with
+                                                        what
+                                                        works for your great &amp; amazing audience.
+                                                    </div>
+                                                    <!--end::Text-->
+
+                                                    <!--begin::Alert-->
+
+                                                    <!--begin::Notice-->
+                                                    <div
+                                                        class="notice d-flex bg-light-warning rounded border-warning border border-dashed  p-6">
+                                                        <!--begin::Icon-->
+                                                        <i class="ki-duotone ki-information fs-2tx text-warning me-4"><span
+                                                                class="path1"></span><span class="path2"></span><span
+                                                                class="path3"></span></i>
+                                                        <!--end::Icon-->
+
+                                                        <!--begin::Wrapper-->
+                                                        <div class="d-flex flex-stack flex-grow-1 ">
+                                                            <!--begin::Content-->
+                                                            <div class=" fw-semibold">
+                                                                <h4 class="text-gray-900 fw-bold">We need your
+                                                                    attention!</h4>
+
+                                                                <div class="fs-6 text-gray-700 ">To start using great
+                                                                    tools, please, <a
+                                                                        href="/metronic8/demo8/../demo8/utilities/wizards/vertical.html"
+                                                                        class="fw-bold">Create Team Platform</a></div>
+                                                            </div>
+                                                            <!--end::Content-->
+
+                                                        </div>
+                                                        <!--end::Wrapper-->
+                                                    </div>
+                                                    <!--end::Notice-->
+                                                    <!--end::Alert-->
+                                                </div>
+                                                <!--end::Body-->
+                                            </div>
+                                            <!--end::Wrapper-->
+
+                                        </div>
+                                        <!--end::Step 5-->
+
+                                        <!--begin::Actions-->
+                                        <div class="d-flex flex-stack pt-10">
+                                            <div class="mr-2">
+                                                <button type="button" class="btn btn-lg btn-light-primary me-3"
+                                                    data-kt-stepper-action="previous">
+                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr063.svg-->
+                                                    <span class="svg-icon svg-icon-4 me-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none">
+                                                            <rect opacity="0.5" x="6" y="11" width="13" height="2"
+                                                                rx="1" fill="black"></rect>
+                                                            <path
+                                                                d="M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z"
+                                                                fill="black"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <!--end::Svg Icon-->Back</button>
+                                            </div>
+
+                                            <!--begin::Wrapper-->
+                                            <div>
+                                                <button type="button" class="btn btn-lg btn-primary me-3"
+                                                    data-kt-stepper-action="submit">
+                                                    <span class="indicator-label">
+                                                        Submit
+                                                        <i class="ki-duotone ki-arrow-right fs-3 ms-2 me-0"><span
+                                                                class="path1"></span><span class="path2"></span></i>
+                                                    </span>
+                                                    <span class="indicator-progress">
+                                                        Please wait... <span
+                                                            class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                                    </span>
+                                                </button>
+
+                                                <button type="button" class="btn btn-lg btn-primary"
+                                                    data-kt-stepper-action="next">
+                                                    Continue
+                                                    <span class="svg-icon svg-icon-4 ms-1 me-0">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none">
+                                                            <rect opacity="0.5" x="18" y="13" width="13" height="2"
+                                                                rx="1" transform="rotate(-180 18 13)" fill="black">
+                                                            </rect>
+                                                            <path
+                                                                d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z"
+                                                                fill="black"></path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <!--end::Wrapper-->
+                                        </div>
+                                        <!--end::Actions-->
+                                    </form>
+                                    <!--end::Form-->
+                                </div>
+                                <!--end::Content-->
+                            </div>
+                            <!--end::Stepper-->
+                        </div>
+                        <!--end::Container-->
+                    </div>
+                    <!--end::Post-->
+                </div>
+                <!--end::Content-->
                 {{-- FOOTER --}}
                 <div class="footer py-6 d-flex flex-lg-column " id="kt_footer">
                     <!--begin::Container-->
@@ -1427,152 +2079,25 @@ License: For each use you must have a valid license purchased only from above li
 
 
     <!--begin::Javascript-->
-
     <script>
-        var hostUrl = "";
-
+        var hostUrl = "/metronic8/demo8/assets/";
     </script>
 
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
-    <script src="{{ asset('plugins/global/plugins.bundle.js') }}"></script>
-    <script src="{{ asset('js/scripts.bundle.js') }}"></script>
+    <script src="{{ asset('/metronic8/demo8/assets/plugins/global/plugins.bundle.js') }}"></script>
+    <script src="{{ asset('/metronic8/demo8/assets/js/scripts.bundle.js') }}"></script>
     <!--end::Global Javascript Bundle-->
 
     <!--begin::Vendors Javascript(used for this page only)-->
-    {{-- <script src="{{ asset('plugins/custom/typedjs/typedjs.bundle.js') }}"></script> --}}
-    {{-- <script src="{{ asset('plugins/custom/ckeditor/ckeditor-inline.bundle.js') }}"></script> --}}
-    {{-- <script src="{{ asset('plugins/custom/tinymce/tinymce.bundle.js') }}"></script> --}}
-    <script src="{{ asset('plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
-    <script src="{{ asset('plugins/custom/datatables/datatables.bundle.js') }}"></script>
-
-    <script>
-        // $("#kt_daterangepicker_1").daterangepicker();
-        $("#kt_datatable_zero_configuration_1").DataTable();
-        $("#kt_datatable_zero_configuration_1_nonactive").DataTable();
-        $("#kt_datatable_zero_configuration_2").DataTable();
-        $("#kt_datatable_zero_configuration_2_nonactive").DataTable();
-
-        function initializeMaxLength(elementClass){
-            $('.' + elementClass).maxlength({
-                warningClass: "badge badge-primary",
-                limitReachedClass: "badge badge-danger"
-            });
-        }
-
-        initializeMaxLength('limitedForm');
-
-        // Stepper lement
-        var element = document.querySelector("#kt_stepper_example_clickable");
-
-        // Initialize Stepper
-        var stepper = new KTStepper(element);
-
-        // Handle navigation click
-        stepper.on("kt.stepper.click", function (stepper) {
-            stepper.goTo(stepper.getClickedStepIndex()); // go to clicked step
-        });
-
-        // Handle next step
-        stepper.on("kt.stepper.next", function (stepper) {
-            stepper.goNext(); // go next step
-        });
-
-        // Handle previous step
-        stepper.on("kt.stepper.previous", function (stepper) {
-            stepper.goPrevious(); // go previous step
-        });
-
-        $(document).ready(function () {
-            function handleTabClick(tabSelector) {
-                $(tabSelector).click(function (e) {
-                    e.preventDefault();
-                    if ($(this).hasClass('active')) {
-                        $(this).removeClass('active');
-                    }
-                });
-            }
-
-            handleTabClick('[href="#kt_tab_pane_1"]');
-            handleTabClick('[href="#kt_tab_pane_1_nonactive"]');
-            handleTabClick('[href="#kt_tab_pane_2"]');
-            handleTabClick('[href="#kt_tab_pane_2_nonactive"]');
-        });
-
-        $(document).ready(function () {
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        $('#imagePreview').attr('src', e.target.result);
-                        $('#imagePreview').css('display', 'block');
-                    }
-
-                    reader.readAsDataURL(input.files[0]);
-                } else {
-                    $('#imagePreview').css('display', 'none');
-                }
-            }
-
-            $("#image").change(function () {
-                readURL(this);
-            });
-        });
-
-
-
-        $(document).ready(function () {
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        var img = new Image();
-                        img.src = e.target.result;
-
-                        img.onload = function () {
-                            if (img.width === 512 && img.height === 512) {
-                                $('#imagePreview').attr('src', e.target.result);
-                                $('#imagePreview').css('display', 'block');
-                                $('#imageError').css('display', 'none');
-                            } else {
-                                $('#imageError').css('display', 'block');
-                                $('#imagePreview').css('display', 'none');
-                            }
-                        };
-                    }
-
-                    reader.readAsDataURL(input.files[0]);
-                } else {
-                    $('#imagePreview').css('display', 'none');
-                    $('#imageError').css('display', 'none');
-                }
-            }
-
-            $("#image").change(function () {
-                readURL(this);
-            });
-        });
-
-    </script>
+    <script src="{{ asset('/metronic8/demo8/assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
     <!--end::Vendors Javascript-->
 
     <!--begin::Custom Javascript(used for this page only)-->
-    <script src="{{ asset('js/widgets.bundle.js') }}"></script>
-    <script src="{{ asset('js/custom/widgets.js') }}"></script>
-    <script src="{{ asset('js/custom/apps/chat/chat.js') }}"></script>
-    <script src="{{ asset('js/custom/utilities/modals/users-search.js') }}"></script>
+    <script src="{{ asset('/metronic8/demo8/assets/js/custom/utilities/modals/create-account.js') }}"></script>
+    <script src="{{ asset('/metronic8/demo8/assets/js/widgets.bundle.js') }}"></script>
+    <script src="{{ asset('/metronic8/demo8/assets/js/custom/widgets.js') }}"></script>
+    <script src="{{ asset('/metronic8/demo8/assets/js/custom/apps/chat/chat.js') }}"></script>
+    <script src="{{ asset('/metronic8/demo8/assets/js/custom/utilities/modals/users-search.js') }}"></script>
     <!--end::Custom Javascript-->
     <!--end::Javascript-->
 
