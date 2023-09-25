@@ -81,23 +81,6 @@
                             </td>
                           
                             <td class="ps-2 pe-4 pm-10 align-middle">
-                                {{-- <div class="dropdown">
-                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
-                                        href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Atur
-                                    </a>
-
-                                    <ul class="dropdown-menu w-200px w-md-250px" aria-labelledby="dropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#">Edit</a>
-                                        </li>
-                                        <li>
-                                            <div class="dropdown-divider"></div>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Pindah
-                                                Etalase</a></li>
-                                    </ul>
-                                </div> --}}
                                 <div class="d-flex justify-content-center">
                                     <div class="d-flex w-150px justify-content-evenly">
                                         <a href="{{ route('beranda.edit_fitur', ['id' => $item->id]) }}" class="btn btn-icon btn-warning"><i class="las la-edit fs-2"></i></a>

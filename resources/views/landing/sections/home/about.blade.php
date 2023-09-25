@@ -19,7 +19,7 @@
 			@if (count($dataapps) >= 3)
 			<div class="row text-center w-100 text-lg-left pt-3 pl-lg-5">
 				@foreach ($dataapps as $item)
-					<div class="col-12 col-lg-4 mb-4 mb-md-0">
+					<div class="col-12 col-lg-4 mb-4">
 						<div class="row justify-content-center justify-content-lg-start">
 							<div class="col-4">
 								<img class="img-fluid mb-4 lazy-load-loaded" src="{{ asset('assets/landing/img/apple-touch-icon.png') }}" alt="">
@@ -50,40 +50,20 @@
 			</div>	
 			@elseif (count($dataapps) == 0)
 			<div class="row text-center text-lg-left pt-3 pl-lg-5">
+				@for ($i = 1; $i <= 3; $i++)
 				<div class="col-12 col-lg-4 mb-4 mb-md-0">
 					<div class="row justify-content-center justify-content-lg-start">
 						<div class="col-4">
 							<img class="img-fluid mb-4 lazy-load-loaded" src="{{ asset('assets/landing/img/apple-touch-icon.png') }}" alt="">
 						</div>
 						<div class="col-lg-8">
-							<h2 class="font-weight-bold text-4 line-height-5 mb-1">Fitur #1</h2>
+							<h2 class="font-weight-bold text-4 line-height-5 mb-1">Fitur #{{ $i }}</h2>
 							<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-12 col-lg-4 mb-4 mb-md-0">
-					<div class="row justify-content-center justify-content-lg-start">
-						<div class="col-4">
-							<img class="img-fluid mb-4 lazy-load-loaded" src="{{ asset('assets/landing/img/apple-touch-icon.png') }}" alt="">
-						</div>
-						<div class="col-lg-8">
-							<h2 class="font-weight-bold text-4 line-height-5 mb-1">Fitur #2</h2>
-							<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-lg-4">
-					<div class="row justify-content-center justify-content-lg-start">
-						<div class="col-4">
-							<img class="img-fluid mb-4 lazy-load-loaded" src="{{ asset('assets/landing/img/apple-touch-icon.png') }}" alt="">
-						</div>
-						<div class="col-lg-8">
-							<h2 class="font-weight-bold text-4 line-height-5 mb-1">Fitur #3</h2>
-							<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</div>
-					</div>
-				</div>
-			</div>	
+				@endfor
+			</div>
 			@endif
 		</div>						
 	</div>

@@ -104,7 +104,7 @@
                         <!--end::Label-->
     
                         <!--begin::Input-->
-                        <textarea type="text" maxlength="30" class="limitedForm form-control form-control-solid limitedForm" name="top_page_text" placeholder="" value=""></textarea>
+                        <textarea type="text" maxlength="15" class="limitedForm form-control form-control-solid limitedForm" name="top_page_text" placeholder="" value=""></textarea>
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
@@ -114,9 +114,9 @@
                         <!--begin::Label-->
                         <label class="form-label">Top Page Subtext</label>
                         <!--end::Label-->
-    
+                    
                         <!--begin::Input-->
-                        <textarea type="text" maxlength="60" class="limitedForm form-control form-control-solid limitedForm" name="top_page_subtext" placeholder="" value=""></textarea>
+                        <textarea type="text" maxlength="15" class="limitedForm form-control form-control-solid limitedForm" name="top_page_subtext" placeholder="" value=""></textarea>
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->

@@ -41,7 +41,7 @@ class BerandaController extends Controller
         Beranda_main::create($validatedData);
 
         return redirect('beranda/main')
-            ->with('success', 'Data Beranda_main berhasil disimpan.');
+            ->with('success', 'Data Disimpan.');
     }
 
     public function edit_main($id)
@@ -64,7 +64,7 @@ class BerandaController extends Controller
         $datamain->update($validatedData);
 
         return redirect('beranda/main')
-            ->with('success', 'Data Diperbarui.');
+            ->with('success', 'Data Dengan ID ' . $id . ' Diperbarui.');
     }
 
     public function destroy_main($id)
@@ -108,7 +108,7 @@ class BerandaController extends Controller
         Beranda_fitur::create($validatedData);
 
         return redirect('beranda/fitur')
-            ->with('success', 'Data berhasil disimpan.');
+            ->with('success', 'Data Disimpan.');
     }
 
     public function edit_fitur($id)
@@ -127,9 +127,7 @@ class BerandaController extends Controller
 
         $datafitur = Beranda_fitur::findOrFail($id);
 
-        // Mengunggah gambar baru jika ada
         if ($request->hasFile('image')) {
-            // Hapus gambar lama jika ada
             if ($datafitur->image_path) {
                 Storage::delete('public/' . $datafitur->image_path);
             }
@@ -141,7 +139,7 @@ class BerandaController extends Controller
         $datafitur->update($validatedData);
 
         return redirect('beranda/fitur')
-            ->with('success', 'Data Diperbarui.');
+            ->with('success', 'Data Dengan ID ' . $id . ' Diperbarui.');
     }
 
     public function destroy_fitur($id)
@@ -155,7 +153,7 @@ class BerandaController extends Controller
         $datafitur->delete();
 
         return redirect('beranda/fitur')
-            ->with('success', 'Data dan gambar telah dihapus.');
+            ->with('success', 'Data Dihapus.');
     }
 
 
@@ -184,7 +182,7 @@ class BerandaController extends Controller
         Beranda_apps::create($validatedData);
 
         return redirect('beranda/apps')
-            ->with('success', 'Data berhasil disimpan.');
+            ->with('success', 'Data Disimpan.');
     }
 
     public function edit_apps($id)
@@ -204,7 +202,7 @@ class BerandaController extends Controller
         $dataapps->update($validatedData);
 
         return redirect('beranda/apps')
-            ->with('success', 'Data Diperbarui.');
+            ->with('success', 'Data Dengan ID ' . $id . ' Diperbarui.');
     }
 
     public function destroy_apps($id)
@@ -242,7 +240,7 @@ class BerandaController extends Controller
         Beranda_mobile::create($validatedData);
 
         return redirect('beranda/mobile')
-            ->with('success', 'Data berhasil disimpan.');
+            ->with('success', 'Data Disimpan.');
     }
 
     public function edit_mobile($id)
@@ -262,7 +260,7 @@ class BerandaController extends Controller
         $datamobile->update($validatedData);
 
         return redirect('beranda/mobile')
-            ->with('success', 'Data dengan ID ' . $id . ' berhasil diperbarui.');
+            ->with('success', 'Data Dengan ID ' . $id . ' Diperbarui.');
     }
 
     public function destroy_mobile($id)
@@ -271,7 +269,7 @@ class BerandaController extends Controller
         $datamobile->delete();
 
         return redirect('beranda/mobile')
-            ->with('success', 'Data dengan ID ' . $id . ' berhasil dihapus.');
+            ->with('success', 'Data Dengan ID ' . $id . ' Dihapus.');
     }
 
 
@@ -300,7 +298,7 @@ class BerandaController extends Controller
         Beranda_summary::create($validatedData);
 
         return redirect('beranda/summary')
-            ->with('success', 'Data berhasil disimpan.');
+            ->with('success', 'Data Disimpan.');
     }
 
     public function edit_summary($id)
@@ -320,7 +318,7 @@ class BerandaController extends Controller
         $datasummary->update($validatedData);
 
         return redirect('beranda/summary')
-            ->with('success', 'Data Diperbarui.');
+            ->with('success', 'Data Dengan ID ' . $id . ' Diperbarui.');
     }
 
     public function destroy_summary($id)
@@ -344,3 +342,4 @@ class BerandaController extends Controller
         'datamobile' => $datamobile, 'datasummary' => $datasummary]);
     }
 }
+
