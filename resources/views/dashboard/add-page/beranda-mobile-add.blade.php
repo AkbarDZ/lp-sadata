@@ -5,7 +5,7 @@
 <div class="stepper bg-white pt-10 pb-10 stepper-column d-flex flex-column flex-lg-row align-items-center justify-content-evenly" id="kt_stepper_example_clickable">
   
         <!--begin::Form-->
-        <form class="form w-lg-750px " action="{{route('beranda.store_mobile')}}" method="POST" id="kt_stepper_example_basic_form">
+        <form class="form w-lg-750px " action')}}" method="POST" id="kt_stepper_example_basic_form">
             <!--begin::Group-->
             @csrf
             <div class="mb-5">
@@ -22,7 +22,7 @@
                         <!--end::Label-->
     
                         <!--begin::Input-->
-                        <textarea type="text" id="kt_docs_maxlength_toptext" maxlength="45" class="form-control form-control-solid" name="mobiles_title" placeholder="" value=""></textarea>
+                        <textarea type="text" maxlength="45" class="form-control form-control-solid limitedForm" name="mobiles_title" placeholder="" value=""></textarea>
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
@@ -34,7 +34,7 @@
                         <!--end::Label-->
     
                         <!--begin::Input-->
-                        <textarea type="text" id="kt_docs_maxlength_subtext" maxlength="145" class="form-control form-control-solid" name="mobiles_description" placeholder="" value=""></textarea>
+                        <textarea type="text" maxlength="145" class="form-control form-control-solid limitedForm" name="mobiles_description" placeholder="" value=""></textarea>
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->

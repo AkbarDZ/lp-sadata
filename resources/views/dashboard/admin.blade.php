@@ -1493,21 +1493,21 @@ License: For each use you must have a valid license purchased only from above li
             stepper.goPrevious(); // go previous step
         });
 
-        $(document).ready(function () {
-            function handleTabClick(tabSelector) {
-                $(tabSelector).click(function (e) {
-                    e.preventDefault();
-                    if ($(this).hasClass('active')) {
-                        $(this).removeClass('active');
-                    }
-                });
-            }
+        // $(document).ready(function () {
+        //     function handleTabClick(tabSelector) {
+        //         $(tabSelector).click(function (e) {
+        //             e.preventDefault();
+        //             if ($(this).hasClass('active')) {
+        //                 $(this).removeClass('active');
+        //             }
+        //         });
+        //     }
 
-            handleTabClick('[href="#kt_tab_pane_1"]');
-            handleTabClick('[href="#kt_tab_pane_1_nonactive"]');
-            handleTabClick('[href="#kt_tab_pane_2"]');
-            handleTabClick('[href="#kt_tab_pane_2_nonactive"]');
-        });
+        //     handleTabClick('[href="#kt_tab_pane_1"]');
+        //     handleTabClick('[href="#kt_tab_pane_1_nonactive"]');
+        //     handleTabClick('[href="#kt_tab_pane_2"]');
+        //     handleTabClick('[href="#kt_tab_pane_2_nonactive"]');
+        // });
 
         $(document).ready(function () {
             function readURL(input) {

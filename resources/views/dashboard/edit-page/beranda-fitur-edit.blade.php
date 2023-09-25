@@ -23,7 +23,7 @@
                         <!--end::Label-->
     
                         <!--begin::Input-->
-                        <textarea type="text" id="kt_docs_maxlength_toptext" maxlength="45" class="form-control form-control-solid" name="points_title" placeholder="">{{$datafitur->points_title}}</textarea>
+                        <textarea type="text" maxlength="45" class="form-control form-control-solid limitedForm" name="points_title" placeholder="">{{$datafitur->points_title}}</textarea>
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
@@ -35,7 +35,7 @@
                         <!--end::Label-->
     
                         <!--begin::Input-->
-                        <textarea type="text" id="kt_docs_maxlength_subtext" maxlength="145" class="form-control form-control-solid" name="points_description" placeholder="">{{$datafitur->points_description}}</textarea>
+                        <textarea type="text" maxlength="145" class="form-control form-control-solid limitedForm" name="points_description" placeholder="">{{$datafitur->points_description}}</textarea>
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->

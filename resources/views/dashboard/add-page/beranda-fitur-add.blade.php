@@ -22,7 +22,7 @@
                         <!--end::Label-->
     
                         <!--begin::Input-->
-                        <textarea type="text" id="kt_docs_maxlength_toptext" maxlength="45" class="form-control form-control-solid" name="points_title" placeholder="" value=""></textarea>
+                        <textarea type="text" maxlength="45" class="form-control form-control-solid limitedForm" name="points_title" placeholder="" value=""></textarea>
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
@@ -34,7 +34,7 @@
                         <!--end::Label-->
     
                         <!--begin::Input-->
-                        <textarea type="text" id="kt_docs_maxlength_subtext" maxlength="145" class="form-control form-control-solid" name="points_description" placeholder="" value=""></textarea>
+                        <textarea type="text" maxlength="180" class="form-control form-control-solid limitedForm" name="points_description" placeholder="" value=""></textarea>
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
@@ -58,6 +58,7 @@
                     <div class="alert alert-danger alert-dismissible" id="imageError" style="display: none;">
                         Gambar harus memiliki ukuran 512x512 piksel.
                     </div>
+                    
                 </div>
                 <!--begin::Step 1-->
             </div>

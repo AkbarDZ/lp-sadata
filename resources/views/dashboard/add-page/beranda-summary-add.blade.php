@@ -22,7 +22,7 @@
                         <!--end::Label-->
     
                         <!--begin::Input-->
-                        <textarea type="text" id="kt_docs_maxlength_toptext" maxlength="45" class="form-control form-control-solid" name="benefits_title" placeholder="" value=""></textarea>
+                        <textarea type="text" maxlength="45" class="form-control form-control-solid limitedForm" name="benefits_title" placeholder="" value=""></textarea>
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
@@ -34,7 +34,7 @@
                         <!--end::Label-->
     
                         <!--begin::Input-->
-                        <textarea type="text" id="kt_docs_maxlength_subtext" maxlength="145" class="form-control form-control-solid" name="benefits_description" placeholder="" value=""></textarea>
+                        <textarea type="text" maxlength="145" class="form-control form-control-solid limitedForm" name="benefits_description" placeholder="" value=""></textarea>
                         <!--end::Input-->
                     </div>
                     <!--end::Input group-->
