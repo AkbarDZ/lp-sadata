@@ -209,7 +209,7 @@ License: For each use you must have a valid license purchased only from above li
                             </div>
 
                             {{-- Fitur --}}
-                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                            <div data-kt-menu-trigger="click" class="menu-item {{ request()->is('fitur/main','fitur/section2','fitur/section3','fitur/section4') ? 'here show' : '' }} menu-accordion">
                                 <span class="menu-link">
                                     <span class="menu-icon">
                                         <i class="fa-solid fa-bars fs-4"></i>
@@ -219,43 +219,35 @@ License: For each use you must have a valid license purchased only from above li
                                 </span>
                                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                                     <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/lists.html">
+                                        <a class="menu-link {{ request()->is('fitur/main') ? 'active' : '' }}" href="{{ route('fitur.main') }}">
                                             <span class="menu-bullet">
                                                 <i class="fa-solid fa-circle-chevron-right fs-7"></i>
                                             </span>
-                                            <span class="menu-title">Navbar Item</span>
+                                            <span class="menu-title">Main Content</span>
                                         </a>
                                     </div>
                                     <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/statistics.html">
+                                        <a class="menu-link {{ request()->is('fitur/section2') ? 'active' : '' }}" href="{{ route('fitur.section2') }}">
                                             <span class="menu-bullet">
                                                 <i class="fa-solid fa-circle-chevron-right fs-7"></i>
                                             </span>
-                                            <span class="menu-title">Section Judul Fitur</span>
+                                            <span class="menu-title">Section 2</span>
                                         </a>
                                     </div>
                                     <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/charts.html">
+                                        <a class="menu-link {{ request()->is('fitur/section3') ? 'active' : '' }}" href="{{ route('fitur.section3') }}">
                                             <span class="menu-bullet">
                                                 <i class="fa-solid fa-circle-chevron-right fs-7"></i>
                                             </span>
-                                            <span class="menu-title">Section A</span>
+                                            <span class="menu-title">Section 3</span>
                                         </a>
                                     </div>
                                     <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/charts.html">
+                                        <a class="menu-link {{ request()->is('fitur/section4') ? 'active' : '' }}" href="{{ route('fitur.section4') }}">
                                             <span class="menu-bullet">
                                                 <i class="fa-solid fa-circle-chevron-right fs-7"></i>
                                             </span>
-                                            <span class="menu-title">Section B</span>
-                                        </a>
-                                    </div>
-                                    <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/charts.html">
-                                            <span class="menu-bullet">
-                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
-                                            </span>
-                                            <span class="menu-title">Section Card</span>
+                                            <span class="menu-title">Section 4</span>
                                         </a>
                                     </div>
                                 </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\FiturController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', [BerandaController::class, 'show']);
 
-Route::get('/hrms', function () {
-    return view('landing.features.hrms');
-});
 
 Route::get('/pricing', function () {
     return view('landing.features.pricing');
@@ -67,6 +65,32 @@ Route::controller(BerandaController::class)->prefix('beranda')->group(function (
     Route::delete('/summary-delete/{id}', 'destroy_summary')->name('beranda.delete_summary');
     
     
+});
+
+Route::controller(FiturController::class)->prefix('fitur')->group(function () {
+
+    Route::get('/main', 'indexdash')->name('fitur.main');
+    Route::get('/main-add', 'create')->name('fitur.create');
+    Route::post('/main-add', 'store')->name('fitur.store');
+    Route::get('/main/{id}', 'show')->name('fitur.show');
+    Route::get('/edit/{id}', 'edit')->name('fitur.edit');
+    Route::put('/edit/{id}', 'update')->name('fitur.update');
+    Route::delete('/delete/{id}', 'destroy')->name('fitur.delete');
+
+
+    Route::get('/section2', 'indexdash2')->name('fitur.section2');
+    Route::get('/section2-edit/{id}', 'edit2')->name('fitur.edit2');
+    Route::put('/section2-edit/{id}', 'update2')->name('fitur.update2');
+
+    Route::get('/section3', 'indexdash3')->name('fitur.section3');
+    Route::get('/section3-edit/{id}', 'edit3')->name('fitur.edit3');
+    Route::put('/section3-edit/{id}', 'update3')->name('fitur.update3');
+
+
+    Route::get('/section4', 'indexdash4')->name('fitur.section4');
+    Route::get('/section4-edit/{id}', 'edit4')->name('fitur.edit4');
+    Route::put('/section4-edit/{id}', 'update4')->name('fitur.update4');
+
 });
 
 

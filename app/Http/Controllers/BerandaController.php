@@ -101,7 +101,7 @@ class BerandaController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('fitur_images', 'public');
+            $imagePath = $request->file('image')->store('fitur_images_main', 'public');
             $validatedData['image_path'] = $imagePath;
         }
 
@@ -132,7 +132,7 @@ class BerandaController extends Controller
                 Storage::delete('public/' . $datafitur->image_path);
             }
 
-            $imagePath = $request->file('image')->store('fitur_images', 'public');
+            $imagePath = $request->file('image')->store('fitur_images_main', 'public');
             $validatedData['image_path'] = $imagePath;
         }
 

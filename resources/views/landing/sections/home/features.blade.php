@@ -14,7 +14,7 @@
 		    </div>
 		    <div class="row">
 		    	<div class="col-lg-6 d-none d-lg-flex ft-img">
-		    		<img src="{{ asset('assets/landing/assets/img/include.png') }}" width="100%" class="pr-2" id="featureImage">
+		    		<img src="{{ asset('assets/landing/assets/img/include.png') }}" style="width: 500px; height:400px" class="pr-2" id="featureImage">
 		    	</div>
 		    	<div class="col-lg-1 d-none d-lg-flex">
 		    	</div>
