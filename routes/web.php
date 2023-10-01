@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\BerandaController;
-use App\Http\Controllers\FiturController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BasicController;
+use App\Http\Controllers\FiturController;
+use App\Http\Controllers\BerandaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', [BerandaController::class, 'show']);
+Route::get('/pricing', [BasicController::class, 'landing'])->name('pricing');
 
 
-Route::get('/pricing', function () {
-    return view('landing.features.pricing');
-});
+// Route::get('/pricing', function () {
+//     return view('landing.features.pricing');
+// });
 
 Route::controller(BerandaController::class)->prefix('beranda')->group(function () {
 
@@ -29,7 +31,7 @@ Route::controller(BerandaController::class)->prefix('beranda')->group(function (
     Route::get('/main-add', 'create_main')->name('beranda.create_main');
     Route::post('/main-add', 'store_main')->name('beranda.store_main');
     Route::get('/main-edit/{id}', 'edit_main')->name('beranda.edit_main');
-    Route::put('/main-edit/{id}', 'update_main')->name('beranda.edit_main');
+    Route::put('/main-edit/{id}', 'update_main')->name('beranda.update_main');
     Route::delete('/main-delete/{id}', 'destroy_main')->name('beranda.delete_main');
 
     // apps 
@@ -90,6 +92,66 @@ Route::controller(FiturController::class)->prefix('fitur')->group(function () {
     Route::get('/section4', 'indexdash4')->name('fitur.section4');
     Route::get('/section4-edit/{id}', 'edit4')->name('fitur.edit4');
     Route::put('/section4-edit/{id}', 'update4')->name('fitur.update4');
+
+});
+
+// //////////
+
+Route::controller(BasicController::class)->prefix('harga')->group(function () {
+
+// BASICS JUDUL
+Route::get('/basicz', 'basicindex')->name('harga.basicz');
+Route::get('/basicz-add', 'basiccreate')->name('harga.create');
+Route::post('/basicz-add', 'basicstore')->name('harga.store');
+Route::get('/basicz-edit/{id}', 'basicedit')->name('harga.edit');
+Route::put('/basicz-edit/{id}', 'basicupdate')->name('harga.update');
+Route::delete('/basicz-delete/{id}', 'basicdestroy')->name('harga.destroy');
+// END BASIC JUDUL
+
+// GENERAL
+Route::get('/generalz', 'generalindex')->name('harga.generalz');
+Route::get('/generalz-add', 'generalcreate')->name('harga.create_general');
+Route::post('/generalz-add', 'generalstore')->name('harga.store_general');
+Route::get('/generalz-edit/{id}', 'generaledit')->name('harga.edit_general');
+Route::put('/generalz-edit/{id}', 'generalupdate')->name('harga.update_general');
+Route::delete('/generalz-delete/{id}', 'generaldestroy')->name('harga.destroy_general');
+// END GENERAL
+
+// ATTENDANCE
+Route::get('/attendancez', 'attendanceindex')->name('harga.attendancez');
+Route::get('/attendancez-add', 'attendancecreate')->name('harga.create_attendance');
+Route::post('/attendancez-add', 'attendancestore')->name('harga.store_attendance');
+Route::get('/attendancez-edit/{id}', 'attendanceedit')->name('harga.edit_attendance');
+Route::put('/attendancez-edit/{id}', 'attendanceupdate')->name('harga.update_attendance');
+Route::delete('/attendancez-delete/{id}', 'attendancedestroy')->name('harga.destroy_attendance');
+// END ATTENDANCE
+
+// REPORT
+Route::get('/reportz', 'reportindex')->name('harga.reportz');
+Route::get('/reportz-add', 'reportcreate')->name('harga.create_report');
+Route::post('/reportz-add', 'reportstore')->name('harga.store_report');
+Route::get('/reportz-edit/{id}', 'reportedit')->name('harga.edit_report');
+Route::put('/reportz-edit/{id}', 'reportupdate')->name('harga.update_report');
+Route::delete('/reportz-delete/{id}', 'reportdestroy')->name('harga.destroy_report');
+// END REPORT
+
+// DROPSEL
+Route::get('/dropselz', 'dropselindex')->name('harga.dropselz');
+Route::get('/dropselz-add', 'dropselcreate')->name('harga.create_dropsel');
+Route::post('/dropselz-add', 'dropselstore')->name('harga.store_dropsel');
+Route::get('/dropselz-edit/{id}', 'dropseledit')->name('harga.edit_dropsel');
+Route::put('/dropselz-edit/{id}', 'dropselupdate')->name('harga.update_dropsel');
+Route::delete('/dropselz-delete/{id}', 'dropseldestroy')->name('harga.destroy_dropsel');
+// END DROPSEL
+
+// PRICING TITLE
+Route::get('/pricingz', 'pricingindex')->name('harga.pricingz');
+Route::get('/pricingz-add', 'pricingcreate')->name('harga.create_pricing');
+Route::post('/pricingz-add', 'pricingstore')->name('harga.store_pricing');
+Route::get('/pricingz-edit/{id}', 'pricingedit')->name('harga.edit_pricing');
+Route::put('/pricingz-edit/{id}', 'pricingupdate')->name('harga.update_pricing');
+Route::delete('/pricingz-delete/{id}', 'pricingdestroy')->name('harga.destroy_pricing');
+// END PRICING TITLE
 
 });
 

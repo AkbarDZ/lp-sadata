@@ -3,10 +3,21 @@
 		<div class="row mb-0 counters">
 			
 			<div class="col-lg-10 text-center offset-lg-1 justify-content-start">
-				<h2 class="font-weight-bold text-9 mb-0" style="letter-spacing: 1px;">Pricing Title</h2>
+				@foreach($pricings as $pricing)
+				<h2 class="font-weight-bold text-9 mb-0" style="letter-spacing: 1px;">
+					
+					{{ $pricing->pricing_title }}
+					
+				</h2>
+				<p class="sub-title text-primary text-4 font-weight-semibold positive-ls-2 mt-2 mb-4">
+					{{ $pricing->pricing_deskripsi }}
+				</p>
+				<p class="mb-0" >{{ $pricing->pricing_isi }}</p>
+				@endforeach
+			</div>
 				{{-- <h1 class="mb-4 mb-md-0"><strong style="font-size: 36px !important; letter-spacing: 2px;">SADATA</strong></h1> --}}
-				<p class="sub-title text-primary text-4 font-weight-semibold positive-ls-2 mt-2 mb-4">SHORT DESCRIPTION</p>
-				<p class="mb-0" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				
+			
 			</div>
 							
 		</div>						

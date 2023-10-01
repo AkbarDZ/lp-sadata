@@ -254,7 +254,7 @@ License: For each use you must have a valid license purchased only from above li
                             </div>
 
                             {{-- Harga --}}
-                            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                            <div data-kt-menu-trigger="click" class="menu-item {{ request()->is('harga/pricingz','harga/basicz','harga/generalz','harga/attendancez','harga/reportz') ? 'here show' : '' }} menu-accordion">
                                 <span class="menu-link">
                                     <span class="menu-icon">
                                         <i class="fa-solid fa-dollar-sign fs-4"></i>
@@ -264,7 +264,7 @@ License: For each use you must have a valid license purchased only from above li
                                 </span>
                                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                                     <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/lists.html">
+                                        <a class="menu-link {{ request()->is('harga/pricingz') ? 'active' : '' }}" href="{{ route('harga.pricingz') }}">
                                             <span class="menu-bullet">
                                                 <i class="fa-solid fa-circle-chevron-right fs-7"></i>
                                             </span>
@@ -272,11 +272,43 @@ License: For each use you must have a valid license purchased only from above li
                                         </a>
                                     </div>
                                     <div class="menu-item">
-                                        <a class="menu-link" href="../../demo8/dist/widgets/statistics.html">
+                                        <a class="menu-link {{ request()->is('harga/basicz') ? 'active' : '' }}" href="{{ route('harga.basicz') }}">
                                             <span class="menu-bullet">
                                                 <i class="fa-solid fa-circle-chevron-right fs-7"></i>
                                             </span>
-                                            <span class="menu-title">Price Tag</span>
+                                            <span class="menu-title">Basic</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link {{ request()->is('harga/generalz') ? 'active' : '' }}" href="{{ route('harga.generalz') }}">
+                                            <span class="menu-bullet">
+                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
+                                            </span>
+                                            <span class="menu-title">General</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link {{ request()->is('harga/attendancez') ? 'active' : '' }}" href="{{ route('harga.attendancez') }}">
+                                            <span class="menu-bullet">
+                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
+                                            </span>
+                                            <span class="menu-title">Attendance</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link {{ request()->is('harga/reportz') ? 'active' : '' }}" href="{{ route('harga.reportz') }}">
+                                            <span class="menu-bullet">
+                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
+                                            </span>
+                                            <span class="menu-title">Report</span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link {{ request()->is('harga/dropselz') ? 'active' : '' }}" href="{{ route('harga.dropselz') }}">
+                                            <span class="menu-bullet">
+                                                <i class="fa-solid fa-circle-chevron-right fs-7"></i>
+                                            </span>
+                                            <span class="menu-title">Dropsel</span>
                                         </a>
                                     </div>
                                 </div>
