@@ -58,13 +58,7 @@
                                             <th class="pb-3 pt-0 w-200px min-w-300px mw-sm-200px">
                                                 Dropsel
                                             </th>
-
-                                            <th class="pb-3 pt-0 w-150px min-w-300px mw-sm-150px">
-                                                Created At</th>
-                                            <th class="pb-3 pt-0 w-150px min-w-200px mw-sm-150px">
-                                                Updated At</th>
-
-                                            <th class="pb-3 pt-0 w-150px min-w-200px mw-sm-150px">
+                                            <th class="pb-3 ps-2 pe-4 pt-0 text-center w-100px min-w-100px">
                                                 Atur</th>
 
                                         </tr>
@@ -96,62 +90,19 @@
                                                 </a>
                                             </td>
 
-
-
-                                            <td class="ps-0 pm-10">
-                                                <a href="#"
-                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">
-                                                    {{ $dropsel->created_at }}
-                                                </a>
-                                            </td>
-                                            <td class="ps-0 pm-10">
-                                                <a href="#"
-                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">
-                                                    {{ $dropsel->updated_at }}
-                                                </a>
-                                            </td>
-
-                                            <td class="px-0 pm-10">
-                                                <div class="dropdown">
-                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
-                                                        style="margin-left: -30px;" href="#" role="button"
-                                                        id="dropdownMenuLink" data-bs-toggle="dropdown"
-                                                        aria-expanded="false">
-                                                        Atur
-                                                    </a>
-
-                                                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
-
-                                                        <li><a class="dropdown-item fs-6"
-                                                                href="{{ route('harga.edit_dropsel', $dropsel->id) }}"><i
-                                                                    class="fa-regular fa-pen-to-square fs-6"></i>
-                                                                Edit</a>
-                                                        </li>
-                                                        <li>
-                                                            <div class="dropdown-divider"></div>
-                                                        </li>
-
-                                                        <li>
-                                                            <a class="dropdown-item fs-6" href="#">
-                                                                <form method="POST"
-                                                                    action="{{ route('harga.destroy_dropsel', $dropsel->id) }}">
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <i class="fa-solid fa-trash fs-6"></i>
-                                                                    <button type="submit" class=" "
-                                                                        style="background-color: white; border: none; color:black;"
-                                                                        onclick="return confirm('Apakah Anda yakin ingin menghapus merek ini?')">Hapus</button>
-
-                                                                </form>
-
-                                                            </a>
-
-                                                        </li>
-
-
-                                                        </a>
-                                                        </li>
-                                                    </ul>
+                                            <td class="ps-2 pe-4 pm-10 align-middle">
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="w-150px d-flex justify-content-evenly">
+                                                        <a href="{{ route('harga.edit_dropsel', ['id' => $dropsel->id]) }}"
+                                                            class="btn btn-icon btn-warning"><i class="las la-edit fs-2"></i></a>
+                                                        <form action="{{ route('harga.destroy_dropsel', ['id' => $dropsel->id]) }}" method="POST"
+                                                            onsubmit="return confirm('you sure?')">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="btn btn-icon btn-danger"><i
+                                                                    class="las la-trash fs-2"></i></button>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>

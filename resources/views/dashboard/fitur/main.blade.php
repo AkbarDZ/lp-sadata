@@ -78,7 +78,7 @@
                             </td>
 
 
-                            <td class="ps-2 pe-4 pm-10 align-middle">
+                            <td class=" ">
                                 {{-- <div class="dropdown">
                                     <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
                                         href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
