@@ -49,7 +49,7 @@
                                                     fill="black" />
                                             </svg>
                                         </span>
-                                        <!--end::Svg Icon-->New Atten</a>
+                                        <!--end::Svg Icon-->Add New</a>
                                 </div>
 
                             </div>

@@ -41,7 +41,7 @@
                                                     fill="black" />
                                             </svg>
                                         </span>
-                                        <!--end::Svg Icon-->New General</a>
+                                        <!--end::Svg Icon-->Add New</a>
                                 </div>
 
                             </div>

@@ -34,7 +34,7 @@
 				@foreach ($datasummary as $item)
 				<div class="d-flex justify-content-lg-start justify-content-center align-items-start border border-top-0 border-right-0 border-left-0 pb-3 mb-3">
 					<i class="fa fa-check text-white bg-primary rounded-circle box-shadow-4 mr-3" style="font-size: 10px !important; padding: 6px !important; margin-top: 2px !important;"></i>
-					<p class="mb-0"><b class="text-color-dark">{{$item->benefits_title}}</b>{{$item->benefits_description}}</p>
+					<p class="mb-0"><b class="text-color-dark">{{$item->benefits_title}}</b> {{$item->benefits_description}}</p>
 				</div>
 				@endforeach
 			@else

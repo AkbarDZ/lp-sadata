@@ -45,7 +45,7 @@
                                                     fill="black" />
                                             </svg>
                                         </span>
-                                        <!--end::Svg Icon-->New Title</a>
+                                        <!--end::Svg Icon-->Add New</a>
                                     @endif
                                 </div>
 
