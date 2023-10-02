@@ -3,8 +3,9 @@
 @section('content')
 <style>
     .text-danger {
-    color: red;
-}
+        color: red;
+    }
+
 </style>
 
 <div class="content d-flex flex-column flex-column-fluid " id="kt_content">
@@ -12,7 +13,7 @@
     <div class="post d-flex flex-column-fluid" id="kt_post">
         <!--begin::Container-->
         <div id="kt_content_container" class=" container-xxl ">
-          
+
             <div class="card card-xl-stretch mb-5 mb-xl-8 ">
 
                 <!--begin::Body-->
@@ -24,26 +25,20 @@
                         <div class="tab-pane fade show active" id="kt_tab_pane_1" role="tabpanel">
                             <div class="row mx-3 justify-content-between border-bottom pt-4 border-default">
 
-                                                <input type="search"
-                                                class="form-control mb-6 w-150px w-lg-300px h-45px px-5 me-4 border-gray-400"
-                                                id="search-sum-active" data-kt-filter="search"
-                                                placeholder="Search Here">
-                                        
-                                                <div class="card-toolbar d-flex w-150px h-45px px-0 p-1 mb-6 " >
-                                                    @if ($showAddButton)
-                                                    <a href="{{ route('harga.create_pricing') }}" class="btn btn-sm btn-light-primary">
-                                                
-                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
-                                                    <span class="svg-icon svg-icon-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                            <rect opacity="0.5" x="11.364" y="20.364" width="16" height="2" rx="1" transform="rotate(-90 11.364 20.364)" fill="black" />
-                                                            <rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="black" />
-                                                        </svg>
-                                                    </span>
-                                                    <!--end::Svg Icon-->Add New</a>
-                                                    @endif
-                                                </div>
-                                        </div>
+                                <input type="search"
+                                    class="form-control mb-6 w-150px w-lg-300px h-45px px-5 me-4 border-gray-400"
+                                    id="search-sum-active" data-kt-filter="search" placeholder="Search Here">
+
+                                @if ($showAddButton)
+                                <a href="{{ route('harga.create_pricing') }}"
+                                    class="btn fs-4 w-50px w-md-150px h-45px btn-white text-center text-dark border border-gray-500 d-flex align-items-center justify-content-evenly"
+                                    id="upload-excel-button">
+                                    <b class="d-none d-md-flex mx-0">Tambah</b>
+                                    <i class="fa-solid fa-square-plus text-center fs-4 text-gray-800 mx-0 p-0"></i>
+                                </a>
+                                @endif
+
+                            </div>
 
                             <!--begin::Table container-->
                             <div class="table-responsive">
@@ -54,19 +49,19 @@
                                     <!--begin::Table head-->
                                     <thead>
                                         <tr class="fw-semibold fs-4">
-                                       
+
                                             <th class="pb-3 pt-0 w-200px min-w-200px mw-sm-300px">
                                                 No
                                             </th>
                                             <th class="pb-3 pt-0 w-200px min-w-300px mw-sm-200px">
-                                               Title
+                                                Title
                                             </th>
                                             <th class="pb-3 pt-0 w-200px min-w-300px mw-sm-200px">
                                                 Deskripsi
-                                             </th>
-                                             <th class="pb-3 pt-0 w-200px min-w-300px mw-sm-200px">
+                                            </th>
+                                            <th class="pb-3 pt-0 w-200px min-w-300px mw-sm-200px">
                                                 Isi
-                                             </th>
+                                            </th>
                                             <th class="pb-3 pt-0 w-150px min-w-300px mw-sm-150px">
                                                 Created At</th>
                                             <th class="pb-3 pt-0 w-150px min-w-200px mw-sm-150px">
@@ -74,9 +69,9 @@
 
                                             <th class="pb-3 pt-0 w-150px min-w-200px mw-sm-150px">
                                                 Atur</th>
-                                         
+
                                         </tr>
-                                    </thead> 
+                                    </thead>
                                     <!--end::Table head-->
 
                                     <!--begin::Table body-->
@@ -84,10 +79,9 @@
                                         @foreach($pricings as $pricing)
                                         <tr class="align-top text-left">
                                             <td class="ps-4 pm-10">
-                                                <a href="#"
-                                                    class="text-dark fw-bold text-hover-primary mb-1 fs-5">
+                                                <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-5">
                                                     {{ $pricing->id }}
-                                                    
+
                                                 </a>
                                             </td>
 
@@ -95,72 +89,75 @@
                                                 <a href="#"
                                                     class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">
                                                     {{ $pricing->pricing_title }}
-                                                   </a>
+                                                </a>
                                             </td>
 
                                             <td class="ps-0 pm-10">
                                                 <a href="#"
                                                     class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">
                                                     {{ $pricing->pricing_isi }}
-                                                   </a>
+                                                </a>
                                             </td>
 
                                             <td class="ps-0 pm-10">
                                                 <a href="#"
                                                     class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">
-                                                {{ $pricing->pricing_deskripsi }}
-                                                   </a>
+                                                    {{ $pricing->pricing_deskripsi }}
+                                                </a>
                                             </td>
 
                                             <td class="ps-0 pm-10">
                                                 <a href="#"
                                                     class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">
                                                     {{ $pricing->created_at }}
-                                                   </a>
+                                                </a>
                                             </td>
                                             <td class="ps-0 pm-10">
                                                 <a href="#"
                                                     class="text-dark fw-bold text-hover-primary mb-1 fs-5 p-0 m-0">
                                                     {{ $pricing->updated_at }}
-                                                   </a>
+                                                </a>
                                             </td>
-                                           
+
                                             <td class="px-0 pm-10">
                                                 <div class="dropdown">
-                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly" style="margin-left: -30px;"
-                                                        href="#" role="button" id="dropdownMenuLink"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <a class="btn fs-4 w-100px h-30px btn-white text-center text-dark border border-gray-500 dropdown-toggle d-flex align-items-center justify-content-evenly"
+                                                        style="margin-left: -30px;" href="#" role="button"
+                                                        id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
                                                         Atur
                                                     </a>
 
-                                                    <ul class="dropdown-menu "
-                                                        aria-labelledby="dropdownMenuLink">
-                                                       
-                                                        <li><a class="dropdown-item fs-6" href="{{ route('harga.edit_pricing', $pricing->id) }}"><i
-                                                            class="fa-regular fa-pen-to-square fs-6"></i>
-                                                        Edit</a>
-                                                </li>
+                                                    <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+
+                                                        <li><a class="dropdown-item fs-6"
+                                                                href="{{ route('harga.edit_pricing', $pricing->id) }}"><i
+                                                                    class="fa-regular fa-pen-to-square fs-6"></i>
+                                                                Edit</a>
+                                                        </li>
                                                         <li>
                                                             <div class="dropdown-divider"></div>
                                                         </li>
-                                                       
+
                                                         <li>
                                                             <a class="dropdown-item fs-6" href="#">
-                                                                <form method="POST" action="{{ route('harga.destroy_pricing', $pricing->id) }}">
+                                                                <form method="POST"
+                                                                    action="{{ route('harga.destroy_pricing', $pricing->id) }}">
                                                                     @csrf
                                                                     @method('DELETE')
                                                                     <i class="fa-solid fa-trash fs-6"></i>
-                                                                    <button type="submit" class=" " style="background-color: white; border: none; color:black;"
-                                                                    onclick="return confirm('Apakah Anda yakin ingin menghapus merek ini?')">Hapus</button>
-                                                                
+                                                                    <button type="submit" class=" "
+                                                                        style="background-color: white; border: none; color:black;"
+                                                                        onclick="return confirm('Apakah Anda yakin ingin menghapus merek ini?')">Hapus</button>
+
                                                                 </form>
                                                             </a>
-                                                         
+
                                                         </li>
-                                                       
-                                                            
-                                                    </a>
-                                                    </li>
+
+
+                                                        </a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </td>
@@ -186,5 +183,3 @@
     <!--end::Page-->
 </div>
 @endsection
-
-
