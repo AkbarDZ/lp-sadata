@@ -188,7 +188,7 @@
     
                 <!--begin::Wrapper-->
                 <div>
-                    <button type="submit" class="btn btn-primary" data-kt-stepper-action="submit">
+                    <button type="submit" id="submitButton" class="btn btn-primary" data-kt-stepper-action="submit">
                         <span class="indicator-label">
                             Submit
                         </span>

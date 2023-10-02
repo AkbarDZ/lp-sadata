@@ -97,7 +97,7 @@ class BerandaController extends Controller
         $validatedData = $request->validate([
             'points_title' => 'nullable|string',
             'points_description' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:width=512,height=512', 
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
         ]);
 
         if ($request->hasFile('image')) {
@@ -122,7 +122,7 @@ class BerandaController extends Controller
         $validatedData = $request->validate([
             'points_title' => 'nullable|string',
             'points_description' => 'nullable|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:width=512,height=512', // Validasi gambar
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi gambar
         ]);
 
         $datafitur = Beranda_fitur::findOrFail($id);

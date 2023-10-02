@@ -1517,6 +1517,12 @@ License: For each use you must have a valid license purchased only from above li
             stepper.goPrevious(); // go previous step
         });
 
+        $(document).ready(function() {
+            $('#kt_stepper_example_basic_form').submit(function() {
+                $('#submitButton').prop('disabled', true);
+            });
+        });
+
         // $(document).ready(function () {
         //     function handleTabClick(tabSelector) {
         //         $(tabSelector).click(function (e) {
@@ -1556,38 +1562,38 @@ License: For each use you must have a valid license purchased only from above li
 
 
 
-        $(document).ready(function () {
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
+        // $(document).ready(function () {
+        //     function readURL(input) {
+        //         if (input.files && input.files[0]) {
+        //             var reader = new FileReader();
 
-                    reader.onload = function (e) {
-                        var img = new Image();
-                        img.src = e.target.result;
+        //             reader.onload = function (e) {
+        //                 var img = new Image();
+        //                 img.src = e.target.result;
 
-                        img.onload = function () {
-                            if (img.width === 512 && img.height === 512) {
-                                $('#imagePreview').attr('src', e.target.result);
-                                $('#imagePreview').css('display', 'block');
-                                $('#imageError').css('display', 'none');
-                            } else {
-                                $('#imageError').css('display', 'block');
-                                $('#imagePreview').css('display', 'none');
-                            }
-                        };
-                    }
+        //                 img.onload = function () {
+        //                     if (img.width === 512 && img.height === 512) {
+        //                         $('#imagePreview').attr('src', e.target.result);
+        //                         $('#imagePreview').css('display', 'block');
+        //                         $('#imageError').css('display', 'none');
+        //                     } else {
+        //                         $('#imageError').css('display', 'block');
+        //                         $('#imagePreview').css('display', 'none');
+        //                     }
+        //                 };
+        //             }
 
-                    reader.readAsDataURL(input.files[0]);
-                } else {
-                    $('#imagePreview').css('display', 'none');
-                    $('#imageError').css('display', 'none');
-                }
-            }
+        //             reader.readAsDataURL(input.files[0]);
+        //         } else {
+        //             $('#imagePreview').css('display', 'none');
+        //             $('#imageError').css('display', 'none');
+        //         }
+        //     }
 
-            $("#image").change(function () {
-                readURL(this);
-            });
-        });
+        //     $("#image").change(function () {
+        //         readURL(this);
+        //     });
+        // });
 
     </script>
     <!--end::Vendors Javascript-->

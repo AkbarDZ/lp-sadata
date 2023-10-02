@@ -196,7 +196,7 @@
             </div>
 
             <div>
-                <button type="submit" class="btn btn-primary" data-kt-stepper-action="submit">
+                <button type="submit" id="submitButton" class="btn btn-primary" data-kt-stepper-action="submit">
                     <span class="indicator-label">Submit</span>
                     <span class="indicator-progress">Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                 </button>
