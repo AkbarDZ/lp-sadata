@@ -1,77 +1,81 @@
 @extends('dashboard.admin')
 
 @section('content')
-<!--begin::Stepper-->
-<div class="stepper bg-white pt-10 pb-10 stepper-column d-flex flex-column flex-lg-row align-items-center justify-content-evenly" id="kt_stepper_example_clickable">
-  
-        <!--begin::Form-->
-        <form class="form w-lg-750px " action')}}" method="POST" id="kt_stepper_example_basic_form">
-            <!--begin::Group-->
-            @csrf
-            <div class="mb-5">
-                <!--begin::Step 1-->
-                <div class="flex-column current" data-kt-stepper-element="content">
-                    <div class="fv-row mb-10">
-                        <h3>Beranda - Mobile Add</h3>
+<form method="POST" action="{{route('beranda.store_mobile')}}">
+
+    @csrf
+
+    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+        <!--begin::Post-->
+        <div class="post d-flex flex-column-fluid" id="kt_post">
+            <!--begin::Container-->
+            <div id="kt_content_container" class="container-xxl">
+                <div class="card mb-5 mb-xl-10">
+                    <!--begin::Card header-->
+                    <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
+                        data-bs-target="#kt_account_profile_details" aria-expanded="true"
+                        aria-controls="kt_account_profile_details">
+                        <!--begin::Card title-->
+                        <div class="card-title m-0">
+                            <h3 class="fw-bolder m-0">Beranda - Mobile Add</h3>
+                        </div>
+
+                        <!--end::Card title-->
                     </div>
 
-                    <!--begin::Input group-->
-                    <div class="fv-row mb-10">
-                        <!--begin::Label-->
-                        <label class="form-label">Mobiles Title</label>
-                        <!--end::Label-->
-    
-                        <!--begin::Input-->
-                        <textarea type="text" maxlength="45" class="form-control form-control-solid limitedForm" name="mobiles_title" placeholder="" value=""></textarea>
-                        <!--end::Input-->
+                    <div id="kt_account_settings_profile_details" class="collapse show">
+                        <!--begin::Form-->
+                        <form id="kt_account_profile_details_form" class="form">
+                            <!--begin::Card body-->
+                            <div class="card-body border-top p-9">
+
+                                <div class="colum mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-1 col-form-label fw-bold fs-6" for="mobiles_title">Mobiles
+                                        Title</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-14 fv-row">
+                                        <textarea type="text" maxlength="45"
+                                            class="form-control form-control-solid limitedForm"
+                                            name="mobiles_title"></textarea>
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                                <div class="colum mb-6">
+                                    <!--begin::Label-->
+                                    <label class="col-lg-2 col-form-label fw-bold fs-6"
+                                        for="mobiles_description">Mobiles
+                                        Description</label>
+                                    <!--end::Label-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-14 fv-row">
+                                        <textarea type="text" maxlength="145"
+                                            class="form-control form-control-solid limitedForm"
+                                            name="mobiles_description"></textarea>
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+
+                            </div>
+                            <!--end::Card body-->
+                            <!--begin::Actions-->
+                            <div class="card-footer d-flex justify-content-end py-6 px-9">
+                                <a href="{{route('beranda.mobile')}}" class="btn btn-light btn-active-light-danger me-2">
+                                    Cancel
+                                </a>
+                                <button type="submit" class="btn btn-primary"
+                                    id="kt_account_profile_details_submit">Submit</button>
+                            </div>
+                            <!--end::Actions-->
+                        </form>
+                        <!--end::Form-->
                     </div>
-                    <!--end::Input group-->
-    
-                    <!--begin::Input group-->
-                    <div class="fv-row mb-10">
-                        <!--begin::Label-->
-                        <label class="form-label">Mobiles Description</label>
-                        <!--end::Label-->
-    
-                        <!--begin::Input-->
-                        <textarea type="text" maxlength="145" class="form-control form-control-solid limitedForm" name="mobiles_description" placeholder="" value=""></textarea>
-                        <!--end::Input-->
-                    </div>
-                    <!--end::Input group-->
+                    <!--end::Content-->
                 </div>
-                <!--begin::Step 1-->
             </div>
-            <!--end::Group-->
-    
-            <!--begin::Actions-->
-            <div class="d-flex flex-stack">
-                <!--begin::Wrapper-->
-                <div class="me-2">
-                    <a href="{{route('beranda.mobile')}}" class="btn btn-light btn-active-light-danger">
-                        Cancel
-                    </a>
-                    <button type="button" class="btn btn-light btn-active-light-primary" data-kt-stepper-action="previous">
-                        Back
-                    </button>
-                </div>
-                <!--end::Wrapper-->
-    
-                <!--begin::Wrapper-->
-                <div>
-                    <button type="submit" id="submitButton" class="btn btn-primary">
-                        <span class="indicator-label">
-                            Submit
-                        </span>
-                        <span class="indicator-progress">
-                            Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-                        </span>
-                    </button>
-                </div>
-                <!--end::Wrapper-->
-            </div>
-            <!--end::Actions-->
-        </form>
-        <!--end::Form-->
+        </div>
     </div>
-    <!--end::Stepper-->
+</form>
 @endsection

@@ -64,7 +64,7 @@ class FiturController extends Controller
         $validatedData = $request->validate([
             'feature_name' => 'required|max:255',
             'description' => 'required',
-            'feature_image_path' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:width=512,height=512',
+            'feature_image_path' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             // Kolom-kolom lain yang perlu divalidasi
         ]);
     
@@ -125,7 +125,7 @@ class FiturController extends Controller
         $this->validate($request, [
             'feature_name' => 'required',
             'description' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048|dimensions:width=512,height=512',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'section2_id' => 'required',
             'section3_id' => 'required',
             'section4_id' => 'required',

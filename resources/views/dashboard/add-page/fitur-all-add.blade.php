@@ -204,4 +204,21 @@
         </div>
     </form>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('#image').on('change', function () {
+            var input = this;
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#imagePreview').attr('src', e.target.result);
+                $('#imagePreview').show();
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+    });
+
+</script>
 @endsection

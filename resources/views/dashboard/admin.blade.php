@@ -254,7 +254,7 @@ License: For each use you must have a valid license purchased only from above li
                             </div>
 
                             {{-- Harga --}}
-                            <div data-kt-menu-trigger="click" class="menu-item {{ request()->is('harga/pricingz','harga/basicz','harga/generalz','harga/attendancez','harga/reportz') ? 'here show' : '' }} menu-accordion">
+                            <div data-kt-menu-trigger="click" class="menu-item {{ request()->is('harga/pricingz','harga/basicz','harga/generalz','harga/attendancez','harga/reportz','harga/dropselz') ? 'here show' : '' }} menu-accordion">
                                 <span class="menu-link">
                                     <span class="menu-icon">
                                         <i class="fa-solid fa-dollar-sign fs-4"></i>
@@ -1537,28 +1537,28 @@ License: For each use you must have a valid license purchased only from above li
         //     handleTabClick('[href="#kt_tab_pane_1_nonactive"]');
         //     handleTabClick('[href="#kt_tab_pane_2"]');
         //     handleTabClick('[href="#kt_tab_pane_2_nonactive"]');
+        // });    
+
+        // $(document).ready(function () {
+        //     function readURL(input) {
+        //         if (input.files && input.files[0]) {
+        //             var reader = new FileReader();
+
+        //             reader.onload = function (e) {
+        //                 $('#imagePreview').attr('src', e.target.result);
+        //                 $('#imagePreview').css('display', 'block');
+        //             }
+
+        //             reader.readAsDataURL(input.files[0]);
+        //         } else {
+        //             $('#imagePreview').css('display', 'none');
+        //         }
+        //     }
+
+        //     $("#image").change(function () {
+        //         readURL(this);
+        //     });
         // });
-
-        $(document).ready(function () {
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
-
-                    reader.onload = function (e) {
-                        $('#imagePreview').attr('src', e.target.result);
-                        $('#imagePreview').css('display', 'block');
-                    }
-
-                    reader.readAsDataURL(input.files[0]);
-                } else {
-                    $('#imagePreview').css('display', 'none');
-                }
-            }
-
-            $("#image").change(function () {
-                readURL(this);
-            });
-        });
 
 
 
