@@ -53,10 +53,11 @@ $fiturs = Fitur::all();
                                                         style="text-decoration:none;">
                                                         <li class="d-flex dropdown-menu-list"
                                                             style="margin-bottom: 8px;">
-                                                            <div class="dropdown-menu-list-link"
+                                                            {{-- <div class="dropdown-menu-list-link"
                                                                 style="margin-right: 12px; vertical-align: middle !important;">
                                                                 <img class="menu-icon"
-                                                                    src="{{ asset('storage/' . $fiturItem->feature_image_path) }}">
+                                                                    src="{{ asset('storage/' . $fiturItem->feature_image_path) }}"
+                                                                    style="width: 24px; height:24px">
                                                             </div>
                                                             <div>
                                                                 <div class="dropdown-menu-list-link dropdown-menu-list-link-text"
@@ -65,6 +66,19 @@ $fiturs = Fitur::all();
                                                                 </div>
                                                                 <div class="dropdown-menu-list-link dropdown-menu-list-link-text"
                                                                     style="font-size: 12px; font-weight: 400; line-height: 1.5 !important; color: #777777; margin-top: 5px !important;-webkit-line-clamp:2;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;">
+                                                                    {{ $fiturItem->description }}
+                                                                </div>
+                                                            </div> --}}
+                                                            <div class="dropdown-menu-list-link" style="margin-right: 12px;" >
+                                                                    <img class="svg-icon svg-icon-2x svg-icon-orange"
+                                                                    src="{{ asset('storage/' . $fiturItem->feature_image_path) }}"
+                                                                    style="width: 24px; height:24px">                                                  
+                                                            </div>
+                                                            <div>
+                                                                <div class="dropdown-menu-list-link dropdown-menu-list-link-text" style="font-size: 14px; font-weight: 500; margin-right: 10px; color: #212529;">
+                                                                    {{ $fiturItem->feature_name }}
+                                                                </div>
+                                                                <div style="font-size: 12px; font-weight: 400; line-height: 1.5 !important; color: #777777; margin-top: 4px !important;">
                                                                     {{ $fiturItem->description }}
                                                                 </div>
                                                             </div>
